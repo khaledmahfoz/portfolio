@@ -1,0 +1,52 @@
+@import '../../variables';
+@import '../../utils';
+
+.navigation{
+   background-color: $darkBlueColor;
+   padding: 0 2rem;
+   div.linksContainer{
+      @include flex-between-center;
+      height: $navHeight;
+      div{
+         font-weight: bold;
+      }
+      ul.navList{
+         display: none;
+         padding: 0;
+         margin: 0;
+         a{
+            color: $whiteColor;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.1s;
+         }
+      }
+   }
+}
+
+@media(min-width: $small){
+   .navigation{
+      padding: 0 4rem;
+   }
+}
+
+@media(min-width: $large){
+   .linksContainer{
+      // max-width: 800px;
+      margin: auto;
+   }
+}
+
+@media(min-width: $xlarge){
+   ul.navList{
+      display: block !important;
+   }
+   .stackedIcon{
+      display: none;
+   }
+   .linksContainer{
+      // max-width: 1000px;
+      margin: auto;
+   }
+}

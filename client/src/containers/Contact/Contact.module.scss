@@ -1,0 +1,117 @@
+@import '../../variables';
+@import '../../utils';
+
+.wrapper{
+   max-width: 1400px;
+   margin: 0 auto;
+}
+
+.contact{
+   padding: 0 2rem;
+   .contactForm{
+      margin-bottom: 50px;
+      form{
+         background-color: $darkBlueColor;
+         .formItem{
+            margin-bottom: 2rem;
+            label{
+               display: block;
+               font-size: 1.3rem;
+               margin-bottom: 1rem;
+            }
+            input, textarea{
+               width: 100%;
+               border: none;
+               background-color: $lightBlueColor;
+               padding: 15px 5px;
+               color: $whiteColor;
+            }
+            textarea{
+               min-height: 100px;
+               max-height: 200px;
+               max-width: 100%;
+               min-width: 100%;
+            }
+            .errMessage{
+               color: #f26755;
+            }
+         }
+      }
+   }
+   .contactInfo{
+      padding-bottom: 50px;
+      ul{
+         margin: 0;
+         li{
+            margin-top: 1.5rem;
+            a, a:active{
+               text-decoration: none;
+               color: $greenColor;
+               font-weight: bold;
+               font-size: 1.1rem;
+            }
+         }
+      }
+   }
+}
+
+@media(min-width: $large){
+   .contact{
+      @include flex-center-start;
+      width: 80%;
+      padding: 0;
+      padding-bottom: 50px;
+      margin: 0 auto;
+      max-width: 1400px;
+      .contactForm{
+         width: 50%;
+         margin-bottom: 0px;
+         form{
+            max-width: 500px;            
+            .formItem{
+               margin-bottom: 2rem;
+               label{
+                  display: block;
+                  margin-bottom: 1rem;
+               }
+               input, textarea{
+                  width: 100%;
+                  border: none;
+                  background-color: $lightBlueColor;
+                  padding: 15px 5px;
+                  color: $whiteColor;
+               }
+               textarea{
+                  min-height: 100px;
+                  max-height: 200px;
+                  max-width: 100%;
+               }
+            }
+         }
+      }
+      .contactInfo{
+         width: 50%;
+         padding-left: 2rem;
+         .contactInfoBody{
+            max-width: 500px;
+            h3{
+               margin-top: 0;
+               font-size: 1.5rem;
+               font-weight: normal;
+            }
+            ul{
+               margin: 0;
+               li{
+                  margin-top: 1.5rem;
+                  a, a:active{
+                     text-decoration: none;
+                     color: $greenColor;
+                     font-weight: bold;
+                     font-size: 1.1rem;
+                  }
+               }
+            }
+         }
+      }
+   }  
+}

@@ -1,0 +1,30 @@
+@import '../../../variables';
+
+.Container{
+   width: 100%;
+   margin: auto;
+}
+
+@media (min-width: $small){
+   .container{
+      max-width: 540px;     
+   }
+}
+
+@media (min-width: $medium){
+   .container{
+      max-width: 720px;      
+   }
+}
+
+@media (min-width: $large){
+   .container{
+      max-width: 960px;
+   }
+}
+
+@media (min-width: $xlarge){
+   .container{
+      max-width: 1140px;
+   }
+}

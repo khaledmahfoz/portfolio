@@ -1,0 +1,16 @@
+$greenColor: #2EC269;
+$darkBlueColor: #16203A;
+$lightBlueColor: #263763;
+$whiteColor: #ffffff;
+
+$navHeight: 75px;
+
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+
+
+:export {
+   navHeight: $navHeight;
+}

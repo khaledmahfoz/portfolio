@@ -1,0 +1,61 @@
+@import './variables';
+
+@mixin fullVh{
+   min-height: calc(100vh - #{$navHeight});
+   // height: 500px;
+}
+
+@mixin flex-center-center{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row !important;
+}
+
+@mixin flex-center-start {
+   @include flex-center-center;
+   align-items: flex-start;
+}
+
+@mixin flex-between-center {
+   @include flex-center-center;
+   justify-content: space-between;
+}
+
+@mixin flex-center-center-col {
+   @include flex-center-center;
+   flex-direction: column !important;
+}
+
+.Button {
+   display: block;
+   text-align: center;
+   background-color: $darkBlueColor;
+   text-decoration: none;
+   width: 100%;
+   padding: 20px 40px;
+   border: 2px solid $greenColor;
+   color: $greenColor;
+   cursor: pointer;
+   outline: transparent;
+   font-size: 1.2rem;
+   transition: 0.1s;
+   &:hover{
+      background: $greenColor;
+      color: $whiteColor;
+   }
+   &:disabled{
+      opacity: 0.7;
+      cursor: not-allowed;
+      &:hover{
+         background-color: $darkBlueColor;
+         color: $greenColor;
+      }
+   }
+}
+
+@media(min-width: $small){
+   .Button{
+      max-width: 200px;
+   }
+}

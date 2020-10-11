@@ -1,0 +1,10 @@
+@import '../../variables';
+@import '../../utils';
+
+.main{
+   @include fullVh;
+   background-color: $darkBlueColor;
+   // padding: 0 2rem;
+   position: relative;
+   z-index: 999;
+}

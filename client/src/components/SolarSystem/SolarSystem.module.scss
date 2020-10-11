@@ -1,0 +1,198 @@
+@import '../../variables';
+@import '../../utils';
+// $black: #080e24;
+// $white: #ffffff;
+$orbit: #626668;
+$sun: 40px;
+// $sunColor: #F90;
+$sunColor: #FD9A26;
+$earth: 15px;
+
+$orbits: (
+	// 1:(
+	// 	radius: 80px,
+	// 	delay: 0.65,
+	// 	planets: (
+	// 		size: 0.2,
+	// 		background-color: #713800,
+	// 		border-color: #623100
+	// 	)
+	// ),
+	1:(
+		radius: 100px,
+		delay: 0.8,
+		planets: (
+         size: 0.5,
+         background-color: #ED553B,
+         border-color: rgb(211, 67, 42)
+			// background-color: #FFD3A8,
+			// border-color: #FFA579
+		)
+	),
+	2:(
+		radius: 200px,
+		delay: 1,
+		planets: (
+         size: 1,
+         background-color: #00B9B9,
+			border-color: #005353
+			// background-color: #0058B0,
+			// border-color: #00366C
+		)
+	),
+	// 4:(
+	// 	radius: 400px,
+	// 	delay: 1.2,
+	// 	planets: (
+	// 		size: 0.5,
+	// 		background-color: #B00000,
+	// 		border-color: #600
+	// 	)
+	// ),
+	// 5:(
+	// 	radius: 500px,
+	// 	delay: 1.5,
+	// 	planets: (
+	// 		size: 2.2,
+	// 		background-color: #F60,
+	// 		border-color: #630
+	// 	)
+	// ),
+	// 6:(
+	// 	radius: 600px,
+	// 	delay: 1.7,
+	// 	planets: (
+	// 		size: 1.8,
+	// 		background-color: #C0C0C0,
+	// 		border-color: #838383
+	// 	)
+	// ),
+	// 7:(
+	// 	radius: 700px,
+	// 	delay: 2,
+	// 	planets: (
+	// 		size: 1.3,
+	// 		background-color: #00B9B9,
+	// 		border-color: #005353
+	// 	)
+	// ),
+	// 8:(
+	// 	radius: 800px,
+	// 	delay: 1.8,
+	// 	planets: (
+	// 		size: 1.1,
+	// 		background-color: #00F,
+	// 		border-color: #00009B
+	// 	)
+	// ),
+);
+
+@keyframes sun-shadow {
+   0% {box-shadow:0px 0px 20px $sunColor;}
+   50% {box-shadow:0px 0px 50px $sunColor;}
+   100% {box-shadow:0px 0px 20px $sunColor;}
+}
+
+@keyframes spin {
+   from {transform:rotateZ(0deg);}
+   to {transform:rotateZ(-360deg);}
+}
+
+@function spinDelay($speed){
+	@return $speed * 10s;
+}
+
+// @mixin flex-center-center{
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+
+@mixin absolute-center-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin orbit-radius($x){
+	width: $x;
+	height: $x;
+	border-radius: 50%;
+	border: 1px solid $orbit;
+	position: absolute;
+	top: calc(50% - #{$x} / 2);
+	left: calc(50% - #{$x} / 2);
+}
+
+@mixin sub-planets($x, $background-color){
+	width: $x;
+	height: $x;
+	background-color: $background-color;
+	border-radius: 50%;
+}
+
+@mixin planets($x, $background-color, $border-color){
+	$relative: $x * $earth;
+	@include sub-planets($relative, $background-color);
+	border-color: $border-color;
+	border-style: solid;
+	box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
+}
+
+.SolarSystem{
+   width: 30%;
+	// width: 250px;
+   height: 250px;
+   margin: 0 auto;
+	// @include flex-center-center;
+	.content{
+      width: 100%;
+      height: 100%;
+		transform-style: preserve-3d;
+		position: relative;
+		.sun{
+			@include absolute-center-center;
+			@include sub-planets($sun, $sunColor);
+			// background:radial-gradient(circle, #F60, #FC0);
+			box-shadow:0px 0px 50px #F90;
+			animation: sun-shadow 2s ease infinite;
+		}
+		// .ring{
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	transform: translate(-50%, -50%) skewX(-50deg);
+		// 	border: 3px solid #5a4e34;
+		// 	height: 40px;
+		// 	width: 40px;
+      //    border-radius: 50%;
+		// }
+		@each $key, $data in $orbits {
+			$orbitRad: map-get($data, "radius");
+			$orbitDelay: map-get($data, "delay");
+			$size: map-get(map-get($data, "planets"), "size");
+			$background-color: map-get(map-get($data, "planets"), "background-color");
+			$border-color: map-get(map-get($data, "planets"), "border-color");
+			
+			.orbit#{$key}{
+				@include orbit-radius($orbitRad);
+				animation: spin spinDelay($orbitDelay) infinite linear;
+				.planet{
+					transform-style: preserve-3d;
+					position: relative;
+					span{
+						@include absolute-center-center;
+						@include planets($size, $background-color, $border-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: $xlarge){
+   .SolarSystem{
+      margin: 0;
+   }
+}
