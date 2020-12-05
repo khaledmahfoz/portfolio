@@ -1,0 +1,112 @@
+@import '../../variables';
+@import '../../utils';
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
+.About{
+   .First{
+      margin: auto;
+      margin-bottom: 3rem;
+      // @include flex-center-center-col;
+      .Info{
+         // padding: 2rem;
+         p{
+            color: #fff;
+            line-height: 1.6;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            span{
+               font-weight: bold;
+               color: #f7df1e;
+               // color: $darkGreenColor;
+               text-decoration: underline;
+            }
+         }
+         q{
+            font-family: 'Bitter', serif;
+            font-size: 1.4rem;
+            color: coral;
+            // line-height: 1.2;
+         }
+      }
+      .Img{
+         img{
+            // max-width: 500px;
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+   .Final{
+      .Skills{
+         ul{
+            background-color: $lightBlueColor;
+            margin: 0;
+            list-style: none;
+            @include flex-center-center;
+            img{
+               width: 50px;
+            }
+         }
+         
+      }
+   }
+}
+
+@media(min-width: $large){
+   .First{
+      @include flex-center-start;
+      height: 400px;
+      background-color: $lightBlueColor;
+      .Info{
+         width: 50%;
+         padding: 0 2rem;
+         height: 100%;
+         @include flex-center-center-col;
+         width: 60%;
+         p{
+            margin: 0 0 0.5rem;
+            font-size: 1.6rem !important;
+         }
+      }
+      .Img{
+         // width: calc(40% - 2rem);
+         width: 50%;
+         // margin-right: 2rem;
+         height: 100%;
+         img{
+            height: 100% !important;
+            width: auto !important;
+         }
+      }
+   }
+}
+
+@media(min-width: $xlarge){
+   .First{
+      // height: 400px;
+      // background-color: $lightBlueColor;
+      @include flex-center-start;
+      .Info{
+         width: 60%;
+         // padding: 0 1rem;
+         padding: 0 2rem 0 0rem;
+         // height: 100%;
+         p{
+            margin: 0 0 0.5rem;
+         }
+         q{
+            font-size: 2rem !important;
+            line-height: 1.5;
+         }
+      }
+      .Img{
+         // height: 100%;
+         // width: calc(40% - 2rem);
+         width: 40%;
+         // margin-right: 2rem;
+         // img{
+         //    height: 100% !important;
+         //    width: auto !important;
+         // }
+      }
+   }
+}

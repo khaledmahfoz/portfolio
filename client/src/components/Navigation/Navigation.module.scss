@@ -3,7 +3,7 @@
 
 .navigation{
    background-color: $darkBlueColor;
-   padding: 0 2rem;
+   // padding: 0 2rem;
    div.linksContainer{
       @include flex-between-center;
       height: $navHeight;
@@ -27,7 +27,7 @@
 
 @media(min-width: $small){
    .navigation{
-      padding: 0 4rem;
+      // padding: 0 4rem;
    }
 }
 
@@ -47,6 +47,6 @@
    }
    .linksContainer{
       // max-width: 1000px;
-      margin: auto;
+      // margin: auto;
    }
 }

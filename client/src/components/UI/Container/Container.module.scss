@@ -3,28 +3,30 @@
 .Container{
    width: 100%;
    margin: auto;
+   padding: 0 2rem;
 }
 
 @media (min-width: $small){
-   .container{
+   .Container{
       max-width: 540px;     
    }
 }
 
 @media (min-width: $medium){
-   .container{
+   .Container{
       max-width: 720px;      
    }
 }
 
 @media (min-width: $large){
-   .container{
+   .Container{
       max-width: 960px;
    }
 }
 
 @media (min-width: $xlarge){
-   .container{
-      max-width: 1140px;
+   .Container{
+      max-width: 1200px;
+      padding: 0 2rem;
    }
 }

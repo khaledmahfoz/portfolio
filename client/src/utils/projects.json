@@ -1,0 +1,67 @@
+{
+   "project1": {
+      "_id": "1",
+      "name": "Shop Easy",
+      "description": "online shopping app",
+      "carousel": [
+         "https://i.imgur.com/mSSGZfl.png",
+         "https://i.imgur.com/WDJBUH8.png",
+         "https://i.imgur.com/Nm9vgPo.png",
+         "https://i.imgur.com/074YotN.png"
+      ],
+      "techs": [
+         "nodejs",
+         "express",
+         "mongodb",
+         "bootstrap",
+         "js"
+      ],
+      "source": {
+         "link": "https://github.com/khaledmahfoz/BuyEasy"
+      },
+      "demo": "https://buy-easy.herokuapp.com/"
+   },
+   "project2": {
+      "_id": "2",
+      "name": "Order Easy",
+      "description": "online food ordering app",
+      "carousel": [
+         "1",
+         "2",
+         "3"
+      ],
+      "techs": [
+         "nodejs",
+         "express",
+         "mongodb",
+         "bootstrap",
+         "js",
+         "reactjs"
+      ],
+      "source": {
+         "frontend": "https://github.com/khaledmahfoz/BuyEasy",
+         "backend": "https://github.com/khaledmahfoz/BuyEasy"
+      },
+      "demo": "https://ordereasy.netlify.app/"
+   },
+   "project3": {
+      "_id": "3",
+      "name": "Camrise",
+      "description": "photographer landing page",
+      "carousel": [
+         "1",
+         "2",
+         "3"
+      ],
+      "techs": [
+         "js",
+         "bootstrap",
+         "html",
+         "css"
+      ],
+      "source": {
+         "link": "https://github.com/khaledmahfoz/BuyEasy"
+      },
+      "demo": "https://camrise.netlify.app/"
+   }
+}

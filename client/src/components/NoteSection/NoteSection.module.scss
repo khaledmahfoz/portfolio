@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.NoteSection{
+   background-color: $lightBlueColor;
+   padding: 2rem;
+   margin-bottom: 25px;
+   width: 100%;
+}
+.NoteSection:last-of-type{
+   margin-bottom: 0;
+}

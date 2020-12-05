@@ -1,0 +1,110 @@
+@import '../../variables';
+@import '../../utils';
+
+.portfolio{
+   width: 100%;
+   margin: 0 auto;
+   // padding: 0 2rem;
+   .portfolioController{
+      ul{
+         list-style: none;
+         padding: 0;
+         li{
+            margin: 0 5px 10px;
+            text-transform: capitalize;
+         }
+      }
+   }
+   .projects{
+      @include flex-center-center-col;
+      .project{
+         position: relative;
+         width: 100%;
+         margin-bottom: 2rem;
+         overflow: hidden;
+         &:hover{
+            .overlay{
+               transform: translateY(100%);
+            }
+         }
+         .overlay{
+            @include flex-center-center;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: coral;
+            transition: 0.15s;
+            .view{
+               width: 70px;
+               height: 70px;
+               img{
+                  cursor: pointer;
+                  width: 100%;
+                  height: auto;
+                  filter: brightness(0) invert(1);
+               }
+            }
+         }
+         .show{
+            transform: translateY(100%);
+         }
+         .img{
+            // background-color: coral;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 250px;
+         }
+         .info{
+            background-color: $lightBlueColor;
+            padding: 1.5rem 1rem;
+            div{
+               font-size: 1.4rem;
+               margin-bottom: 1rem;
+            }
+            p{
+               margin: 0;
+            }
+         }
+      }
+   }
+}
+
+@media(min-width: $small){
+   .portfolio{
+      // max-width: 600px;
+   }
+}
+
+@media(min-width: $medium){
+   .portfolio{
+      // max-width: 1000px;
+      .portfolioController{
+         margin-bottom: 50px;
+         margin-top: 50px;
+      }
+      .projects{
+         @include flex-start-center;
+         flex-wrap: wrap;
+         .project{
+            width: calc(50% - 1rem);
+            margin-right: 1rem;
+         }
+      }
+   }
+}
+
+@media(min-width: $xlarge){
+   .portfolio{
+      // max-width: 1400px;
+      .projects{
+         @include flex-start-center;
+         .project{
+            width: calc(100% / 3 - 1rem);
+            margin-right: 1rem;
+         }
+      }
+   }
+}

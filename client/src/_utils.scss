@@ -12,9 +12,14 @@
    flex-direction: row !important;
 }
 
+@mixin flex-start-center {
+   @include flex-center-center;
+   justify-content: flex-start;
+}
+
 @mixin flex-center-start {
    @include flex-center-center;
-   align-items: flex-start;
+   align-items: flex-start !important;
 }
 
 @mixin flex-between-center {
@@ -27,13 +32,15 @@
    flex-direction: column !important;
 }
 
-.Button {
-   display: block;
+.ButtonBlueprintEffect{
+   background: $greenColor !important;
+   color: $whiteColor !important;
+}
+
+%ButtonBlueprint{
    text-align: center;
    background-color: $darkBlueColor;
    text-decoration: none;
-   width: 100%;
-   padding: 20px 40px;
    border: 2px solid $greenColor;
    color: $greenColor;
    cursor: pointer;
@@ -41,8 +48,9 @@
    font-size: 1.2rem;
    transition: 0.1s;
    &:hover{
-      background: $greenColor;
-      color: $whiteColor;
+      @extend .ButtonBlueprintEffect;
+      // background: $greenColor !important;
+      // color: $whiteColor !important;     
    }
    &:disabled{
       opacity: 0.7;
@@ -52,6 +60,22 @@
          color: $greenColor;
       }
    }
+}
+
+.Button {
+   @extend %ButtonBlueprint;
+   display: block;
+   width: 100%;
+   padding: 20px 40px;
+}
+
+.ButtonCustom{
+   @extend %ButtonBlueprint;
+   display: inline-block;
+   padding: 10px 15px;
+   background-color: $lightBlueColor;
+   color: $whiteColor;
+   border: none;
 }
 
 @media(min-width: $small){

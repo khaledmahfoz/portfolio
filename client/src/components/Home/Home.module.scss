@@ -5,8 +5,7 @@
    @include fullVh;
    @include flex-center-center-col;
    margin: auto;
-   padding: 2rem;
-   // overflow: hidden;
+   // padding: 2rem;
    .Info{
       padding-bottom: 2rem;
       h1{
@@ -22,12 +21,14 @@
          font-weight: normal;
          font-size: 22px;
          margin-bottom: 0.5rem;
+         color: rgba(255, 255, 255, 0.7);
       }
       p{
          margin-top: 0;
          font-size: 18px;
          margin-bottom: 2rem;
-         color: hsla(0,0%,100%,.8);
+         // color: hsla(0,0%,100%,.8);
+         color: rgba(255, 255, 255, 0.7);
          line-height: 1.4;
       }
       a{
@@ -63,7 +64,7 @@
             font-size: 30px;
          }
          p{
-            font-size: 20px;
+            font-size: 15px;
          }
          // a{
          //    width: 200px;
@@ -74,10 +75,10 @@
 
 @media(min-width: $large){
    .Home{
-      width: 70%;
       @include flex-between-center;
       // max-width: 800px;
       .Info{
+         width: 70%;
          h1{
             font-size: 60px;
          }
@@ -85,7 +86,7 @@
             font-size: 40px;
          }
          p{
-            font-size: 30px;
+            font-size: 25px;
          }
       }
    }

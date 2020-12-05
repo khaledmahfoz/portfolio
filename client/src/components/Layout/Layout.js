@@ -2,19 +2,23 @@ import React from 'react';
 
 import classes from './Layout.module.scss'
 
-import Navigation from '../Navigation/Navigation';
-import SpaceBackground from '../SpaceBackground/SpaceBackground';
+import stars from '../../images/stars.svg';
 
-const layout = props => {
+import Navigation from '../Navigation/Navigation';
+// import SpaceBackground from '../SpaceBackground/SpaceBackground';
+
+const Layout = props => {
    return (
       <>
          <Navigation />
-         <main className={classes.main}>
-            <SpaceBackground />
+         <main className={classes.main} style={{backgroundImage: `url("${stars}")`}}>
+            {/* <SpaceBackground contentRef={contentRef} /> */}
             {props.children}
+            {/* <div id="content" ref={contentRef}>
+            </div> */}
          </main>
       </>
    );
 }
 
-export default layout;
+export default Layout;

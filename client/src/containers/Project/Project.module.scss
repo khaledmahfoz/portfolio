@@ -1,0 +1,104 @@
+@import '../../variables';
+@import '../../utils';
+
+.Project{
+   padding: 100px 0rem;
+   margin: auto;
+   .ProjectMain{
+      margin-bottom: 50px;
+      .Carousel{
+         width: 100%;
+         height: 400px;
+         background-color: coral;
+         margin-bottom: 50px;
+         .Slide{
+            @include flex-center-center;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            // img{
+            //    // width: 100%;
+            //    height: 100%;
+            //    object-fit: cover;
+            // }
+         }
+         
+      }
+      .Description{
+         .DescriptionTitle{
+            font-size: 30px;
+            font-weight: bold;
+            color: $greenColor;
+         }
+      }
+   }
+   .ProjectSide{
+      span{
+         background-color: $darkBlueColor;
+         margin: 5px;
+         &:hover{
+            background-color: $darkBlueColor !important;
+            cursor: auto;
+         }
+      }
+      .Title{
+         font-size: 22px;
+         text-transform: capitalize;
+         font-weight: bold;
+         margin-bottom: 20px;
+      }
+      .Link{
+         margin-bottom: 1rem;
+         div{
+            text-transform: capitalize;
+            margin-bottom: 0.5rem;
+         }
+      }
+      .Demo{
+         text-decoration: none;
+         color: $greenColor;
+         font-size: 1.2rem;
+         word-break: break-all;
+      }
+   }
+}
+
+@media(min-width: $medium){
+   .Project{
+      // max-width: 700px;
+      .ProjectMain{
+         .Carousel{
+            height: 500px;
+         }
+      }
+   }
+}
+
+@media(min-width: $large){
+   .Project{
+      // max-width: 900px;
+      .ProjectMain{
+         .Carousel{
+            height: 600px;
+         }
+      }
+   }
+}
+
+@media(min-width: $xlarge){
+   .Project{
+      // max-width: 1400px;
+      @include flex-center-start;
+      .ProjectMain{
+         width: 60%;
+         padding-right: 50px;
+         .Carousel{
+            height: 500px;
+         }
+      }
+      .ProjectSide{
+         width: 40%;
+      }
+   }
+}

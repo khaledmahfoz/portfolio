@@ -7,7 +7,7 @@
 }
 
 .contact{
-   padding: 0 2rem;
+   // padding: 0 2rem;
    .contactForm{
       margin-bottom: 50px;
       form{
@@ -58,7 +58,7 @@
 @media(min-width: $large){
    .contact{
       @include flex-center-start;
-      width: 80%;
+      // width: 80%;
       padding: 0;
       padding-bottom: 50px;
       margin: 0 auto;

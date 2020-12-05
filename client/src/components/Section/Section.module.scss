@@ -1,12 +1,12 @@
 @import '../../variables';
 
 .Section{
-   .wrapper{
-      max-width: 1400px;
-      margin: auto;
-      width: 100%;
-   }
-   padding: 3rem 2rem;
+   // .wrapper{
+   //    max-width: 1400px;
+   //    margin: auto;
+   //    width: 100%;
+   // }
+   padding: 2rem 0rem;
    background-color: $lightBlueColor;
    color: $whiteColor;
    margin-bottom: 3rem;
@@ -23,9 +23,9 @@
 
 @media(min-width: $large){
    .Section{
-      padding: 3rem 0;
-      .wrapper{
-         width: 80%;
-      }
+      // padding: 3rem 0;
+      // .wrapper{
+      //    width: 80%;
+      // }
    }
 }
