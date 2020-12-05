@@ -1,4 +1,4 @@
 [build]
-  base    = "client"
+  base    = "clent"
   publish = "client/dist/"
   command = "npm run build"
