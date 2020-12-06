@@ -17,7 +17,7 @@ const Portfolio = () => {
       history.push(`/portfolio/${id}`);
    }
 
-   const catageories = ['all', 'static', 'js', 'sass', 'bootstrap', 'nodejs', 'express', 'mongodb', 'reactjs', 'react native'];
+   const catageories = ['all', 'static', 'SPA', 'multipage', 'full stack', 'SSR/SSG', 'react native'];
 
    const [catageoryState, setCatageoryState] = useState('all');
 

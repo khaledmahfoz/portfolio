@@ -10,11 +10,15 @@
          "https://i.imgur.com/074YotN.png"
       ],
       "techs": [
+         "multipage",
+         "full stack",
          "nodejs",
          "express",
          "mongodb",
          "bootstrap",
-         "js"
+         "js",
+         "pugjs",
+         "multer"
       ],
       "source": {
          "link": "https://github.com/khaledmahfoz/BuyEasy"
@@ -31,12 +35,17 @@
          "3"
       ],
       "techs": [
+         "SPA",
+         "full stack",
          "nodejs",
          "express",
          "mongodb",
          "bootstrap",
          "js",
-         "reactjs"
+         "reactjs",
+         "react-router",
+         "redux",
+         "fetch API"
       ],
       "source": {
          "frontend": "https://github.com/khaledmahfoz/BuyEasy",
@@ -54,10 +63,11 @@
          "3"
       ],
       "techs": [
+         "static",
          "js",
-         "bootstrap",
          "html",
-         "css"
+         "css",
+         "bootstrap"
       ],
       "source": {
          "link": "https://github.com/khaledmahfoz/BuyEasy"

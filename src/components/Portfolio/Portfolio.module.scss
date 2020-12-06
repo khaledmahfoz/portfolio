@@ -34,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: coral;
+            background-color: #F16529;
             transition: 0.15s;
             .view{
                width: 70px;
@@ -73,9 +73,9 @@
 }
 
 @media(min-width: $small){
-   .portfolio{
-      // max-width: 600px;
-   }
+   // .portfolio{
+   //    // max-width: 600px;
+   // }
 }
 
 @media(min-width: $medium){
