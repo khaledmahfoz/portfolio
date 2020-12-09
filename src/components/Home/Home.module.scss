@@ -3,15 +3,14 @@
 
 .Home{
    @include fullVh;
-   @include flex-center-center-col;
+   @include flex-start-center-col;
    margin: auto;
-   // padding: 2rem;
+   font-size: 16px;
+   padding: 1em 0;
    .Info{
-      padding-bottom: 2rem;
       h1{
-         margin-top: 0;
-         font-size: 40px;
-         margin-bottom: 1rem;
+         font-size: 3em;
+         margin-bottom: 0.2em;
          span{
             color: $greenColor;
          }
@@ -19,96 +18,36 @@
       h3{
          margin-top: 0;
          font-weight: normal;
-         font-size: 22px;
-         margin-bottom: 0.5rem;
-         color: rgba(255, 255, 255, 0.7);
+         font-size: 2em;
       }
       p{
-         margin-top: 0;
-         font-size: 18px;
-         margin-bottom: 2rem;
-         // color: hsla(0,0%,100%,.8);
+         font-size: 1.4em;
          color: rgba(255, 255, 255, 0.7);
-         line-height: 1.4;
+         line-height: 1.5;
       }
       a{
          @extend .Button;
-         // display: block;
-         // text-align: center;
-         // background-color: $darkBlueColor;
-         // text-decoration: none;
-         // width: 100%;
-         // padding: 20px 40px;
-         // border: 2px solid $greenColor;
-         // color: $greenColor;
-         // cursor: pointer;
-         // outline: transparent;
-         // font-size: 1.2rem;
-         // transition: 0.1s;
-         // &:hover{
-         //    background: $greenColor;
-         //    color: $whiteColor;
-         // }
       }
    }
 }
 
-@media(min-width: $small){
-   .Home{
-      padding: 4rem 2rem;
-      .Info{
-         h1{
-            font-size: 50px;
-         }
-         h3{
-            font-size: 30px;
-         }
-         p{
-            font-size: 15px;
-         }
-         // a{
-         //    width: 200px;
-         // }
-      }
-   }
-}
 
 @media(min-width: $large){
    .Home{
       @include flex-between-center;
-      // max-width: 800px;
       .Info{
-         width: 70%;
-         h1{
-            font-size: 60px;
-         }
-         h3{
-            font-size: 40px;
-         }
-         p{
-            font-size: 25px;
-         }
+         width: 60%;
       }
    }
 }
 
 @media(min-width: $xlarge){
    .Home{
-      // max-width: 1000px;
+      font-size: 20px;
       padding: 0;
-      // @include fullVh;
       @include flex-between-center;
       .Info{
-         width: 70%;
-         h1{
-            margin-bottom: 2rem;
-         }
-         h3{
-            margin-bottom: 1rem;
-         }
-         p{
-            margin-bottom: 3rem;
-         }
+         width: 60%;
       }
    }
 }

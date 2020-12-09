@@ -12,18 +12,10 @@ import Section from '../Section/Section';
 import Container from '../UI/Container/Container';
 
 const Portfolio = () => {
+
    const myRef = useRef();
-   useEffect(() => {
-      console.log(myRef)
-      const mixer = mixItUp(myRef.current, {
-         animation: {
-            effects: 'scale(0.1)'
-         },
-         animation: {
-            duration: 250
-         }
-      });
-   }, [])
+   const warningRef = useRef();
+
    const history = useHistory();
 
    const navigateHandler = (id) => {
@@ -34,10 +26,31 @@ const Portfolio = () => {
 
    const [catageoryState, setCatageoryState] = useState('all');
 
+   useEffect(() => {
+      const mixer = mixItUp(myRef.current, {
+         animation: {
+            effects: 'fade scale(0.5)'
+         },
+         animation: {
+            duration: 300
+         },
+         callbacks: {
+            onMixEnd: function (state) {
+               if (state.hasFailed) {
+                  warningRef.current.classList.add(classes.warningShow);
+               }
+               else {
+                  warningRef.current.classList.remove(classes.warningShow);
+                  // warningRef.current.classList.add(classes.warningShow);
+               }
+            }
+         }
+      });
+   }, []);
+
    const changeCatageory = (elem) => {
       setCatageoryState(elem);
    }
-
    const content = catageories.map(elem => {
       return (
          <li
@@ -49,25 +62,28 @@ const Portfolio = () => {
             {elem}
          </li>
       );
-   })
+   });
+
 
    let projects = Object.entries(projectsData).map(([key, data]) => {
       return (
-         <div className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix`} key={data._id}>
-            <div className={classes.overlay}>
-               <div
-                  className={classes.view}
-                  onClick={navigateHandler.bind(this, data._id)}
-               >
-                  <img src={view} alt="view" />
+         <>
+            <div className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
+               <div className={classes.overlay}>
+                  <div
+                     className={classes.view}
+                     onClick={navigateHandler.bind(this, data._id)}
+                  >
+                     <img src={view} alt="view" />
+                  </div>
+               </div>
+               <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>
+               <div className={classes.info}>
+                  <div>{data.name}</div>
+                  <p>{data.description}</p>
                </div>
             </div>
-            <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>
-            <div className={classes.info}>
-               <div>{data.name}</div>
-               <p>{data.description}</p>
-            </div>
-         </div>
+         </>
       )
    })
 
@@ -83,6 +99,7 @@ const Portfolio = () => {
                <div className={classes.portfolioController}>
                   <ul>{content}</ul>
                </div>
+               <div className={`${classes.warning} ${classes.warningHide}`} ref={warningRef}>stay tuned</div>
                <div className={classes.projects} ref={myRef}>
                   {projects}
                </div>

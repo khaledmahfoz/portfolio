@@ -9,7 +9,7 @@ $earth: 15px;
 
 $orbits: (
 	1:(
-		radius: 100px,
+		radius: 120px,
 		delay: 0.8,
 		planets: (
          size: 0.5,
@@ -20,7 +20,7 @@ $orbits: (
 		)
 	),
 	2:(
-		radius: 200px,
+		radius: 220px,
 		delay: 1,
 		planets: (
          size: 1,
@@ -131,7 +131,7 @@ $orbits: (
 }
 
 .SolarSystem{
-   width: 30%;
+   width: 40%;
    height: 250px;
    margin: 0 auto;
 	.content{

@@ -32,6 +32,12 @@
    flex-direction: column !important;
 }
 
+@mixin flex-start-center-col {
+   @include flex-center-center;
+   flex-direction: column !important;
+   justify-content: flex-start !important;
+}
+
 .ButtonBlueprintEffect{
    background: $greenColor !important;
    color: $whiteColor !important;
