@@ -93,14 +93,6 @@ const Project = () => {
                      <a className={classes.Demo} href={project.demo}>{project.demo}</a>
                   </div>
                </Section>
-               {/* <NoteSection>
-                  <div className={classes.Title}>
-                     try it online
-                  </div>
-                  <div className={classes.Body}>
-                     <a className={classes.Demo} href={project.demo}>{project.demo}</a>
-                  </div>
-               </NoteSection> */}
             </div>
          </div>
       </Container>
