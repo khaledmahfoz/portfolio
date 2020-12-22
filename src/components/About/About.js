@@ -12,7 +12,7 @@ import SkillTree from '../SkillTree/SkillTree';
 
 const About = () => {
    return (
-      <>
+      <div>
          <Section>
             <h3>About Me</h3>
             <p>more about me and my skills</p>
@@ -36,7 +36,7 @@ const About = () => {
                </div>
             </div>
          </Container>
-      </>
+      </div>
    );
 }
 

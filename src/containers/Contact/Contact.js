@@ -140,7 +140,7 @@ const Contact = () => {
    });
 
    return (
-      <>
+      <div>
          <Section>
             <h3>Contact Me</h3>
             <p>contact me to build your project</p>
@@ -179,7 +179,7 @@ const Contact = () => {
                </div>
             </div>
          </Container>
-      </>
+      </div>
    );
 }
 

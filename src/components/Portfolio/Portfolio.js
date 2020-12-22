@@ -27,12 +27,10 @@ const Portfolio = () => {
    const [catageoryState, setCatageoryState] = useState('all');
 
    useEffect(() => {
-      const mixer = mixItUp(myRef.current, {
+      mixItUp(myRef.current, {
          animation: {
-            effects: 'fade scale(0.5)'
-         },
-         animation: {
-            duration: 300
+            effects: 'fade scale(0.1)',
+            duration: 200
          },
          callbacks: {
             onMixEnd: function (state) {
@@ -41,7 +39,6 @@ const Portfolio = () => {
                }
                else {
                   warningRef.current.classList.remove(classes.warningShow);
-                  // warningRef.current.classList.add(classes.warningShow);
                }
             }
          }
@@ -67,29 +64,28 @@ const Portfolio = () => {
 
    let projects = Object.entries(projectsData).map(([key, data]) => {
       return (
-         <>
-            <div className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
-               <div className={classes.overlay}>
-                  <div
-                     className={classes.view}
-                     onClick={navigateHandler.bind(this, data._id)}
-                  >
-                     <img src={view} alt="view" />
-                  </div>
-               </div>
-               <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>
-               <div className={classes.info}>
-                  <div>{data.name}</div>
-                  <p>{data.description}</p>
+         <div className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
+            <div className={classes.overlay}>
+               <div
+                  className={classes.view}
+                  onClick={navigateHandler.bind(this, data._id)}
+               >
+                  <img src={view} alt="view" />
                </div>
             </div>
-         </>
+            <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>
+            <div className={classes.info}>
+               <div>{data.name}</div>
+               <p>{data.description}</p>
+            </div>
+         </div>
+
       )
    })
 
 
    return (
-      <>
+      <div>
          <Section>
             <h3>My Portfolio</h3>
             <p>Here are some of my work</p>
@@ -105,7 +101,7 @@ const Portfolio = () => {
                </div>
             </div>
          </Container>
-      </>
+      </div>
    )
 }
 

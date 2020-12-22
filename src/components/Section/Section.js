@@ -8,9 +8,6 @@ const Section = props => {
       <div className={classes.Section}>
          <Container>
             {props.children}
-
-            {/* <div className={classes.wrapper}>
-         </div> */}
          </Container>
       </div>
    );

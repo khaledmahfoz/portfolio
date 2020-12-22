@@ -2,7 +2,6 @@
 
 @mixin fullVh{
    min-height: calc(100vh - #{$navHeight});
-   // height: 500px;
 }
 
 @mixin flex-center-center{
@@ -54,9 +53,7 @@
    font-size: 1.2rem;
    transition: 0.1s;
    &:hover{
-      @extend .ButtonBlueprintEffect;
-      // background: $greenColor !important;
-      // color: $whiteColor !important;     
+      @extend .ButtonBlueprintEffect;    
    }
    &:disabled{
       opacity: 0.7;
