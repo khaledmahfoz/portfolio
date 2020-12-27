@@ -125,7 +125,7 @@ const Contact = () => {
    content = Object.entries(formElems).map(([key, data]) => {
       return (
          <div key={key} className={classes.formItem}>
-            <label for={data.configs.id}>{data.label}</label>
+            <label htmlFor={data.configs.id}>{data.label}</label>
             <FormInput
                type={data.configs.type}
                value={data.value}
