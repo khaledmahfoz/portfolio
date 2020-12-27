@@ -3,7 +3,6 @@
 
 .navigation{
    background-color: $darkBlueColor;
-   // padding: 0 2rem;
    div.linksContainer{
       @include flex-between-center;
       height: $navHeight;
@@ -14,6 +13,7 @@
          display: none;
          padding: 0;
          margin: 0;
+         list-style: none;
          a{
             color: $whiteColor;
             margin: 0 15px;
@@ -25,28 +25,19 @@
    }
 }
 
-@media(min-width: $small){
-   .navigation{
-      // padding: 0 4rem;
-   }
-}
 
 @media(min-width: $large){
    .linksContainer{
-      // max-width: 800px;
       margin: auto;
    }
 }
 
 @media(min-width: $xlarge){
    ul.navList{
-      display: block !important;
+      display: flex !important;
+      @include flex-center-center;
    }
    .stackedIcon{
       display: none;
-   }
-   .linksContainer{
-      // max-width: 1000px;
-      // margin: auto;
    }
 }

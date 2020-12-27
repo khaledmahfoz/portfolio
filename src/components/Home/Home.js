@@ -12,15 +12,15 @@ const Home = () => {
          <Container>
             <div className={classes.Home}>
                <div className={classes.Info}>
-                  <h1>HI, I’m <span>Khaled Mahfoz</span></h1>
+                  <h2>HI, I’m <span>Khaled Mahfoz</span></h2>
                   <h3>i’m a Full-stack developer</h3>
                   <p>
                      Building web applications with the latest techs.
                      like React, nodejs and Mongodb
-               </p>
+                  </p>
                   <Link to="/portfolio">
                      My portfolio
-               </Link>
+                  </Link>
                </div>
                <SolarSystem />
             </div>

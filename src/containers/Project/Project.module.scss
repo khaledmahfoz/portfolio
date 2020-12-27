@@ -9,7 +9,6 @@
       .Carousel{
          width: 100%;
          height: 400px;
-         background-color: $orangeColor;
          margin-bottom: 50px;
          .Slide{
             @include flex-center-center;

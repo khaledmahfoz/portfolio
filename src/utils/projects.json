@@ -10,11 +10,12 @@
          "https://i.imgur.com/074YotN.png"
       ],
       "techs": [
+         "fullstack",
+         "js",
          "nodejs",
          "express",
          "mongodb",
-         "bootstrap",
-         "js"
+         "bootstrap"
       ],
       "source": {
          "link": "https://github.com/khaledmahfoz/BuyEasy"
@@ -26,17 +27,20 @@
       "name": "Order Easy",
       "description": "online food ordering app",
       "carousel": [
-         "1",
-         "2",
-         "3"
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/1.PNG",
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/2.PNG",
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/3.PNG"
       ],
       "techs": [
+         "fullstack",
+         "frontend",
+         "js",
          "nodejs",
          "express",
          "mongodb",
+         "reactjs",
          "bootstrap",
-         "js",
-         "reactjs"
+         "jwt"
       ],
       "source": {
          "frontend": "https://github.com/khaledmahfoz/BuyEasy",
@@ -46,18 +50,40 @@
    },
    "project3": {
       "_id": "3",
+      "name": "Search movies",
+      "description": "search movies app",
+      "carousel": [
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/4.PNG",
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/5.PNG"
+      ],
+      "techs": [
+         "fullstack",
+         "frontend",
+         "js",
+         "nodejs",
+         "express",
+         "reactjs",
+         "react-bootstrap"
+      ],
+      "source": {
+         "frontend": "https://github.com/khaledmahfoz/watch_easy",
+         "backend": "https://github.com/khaledmahfoz/watch_easy_api"
+      },
+      "demo": "https://searchmoviesappdb.netlify.app/"
+   },
+   "project4": {
+      "_id": "4",
       "name": "Camrise",
       "description": "photographer landing page",
       "carousel": [
-         "1",
-         "2",
-         "3"
+         "https://f000.backblazeb2.com/file/portfolio-prjs/order_easy/6.PNG"
       ],
       "techs": [
-         "js",
-         "bootstrap",
+         "frontend",
          "html",
-         "css"
+         "css",
+         "js",
+         "bootstrap"
       ],
       "source": {
          "link": "https://github.com/khaledmahfoz/BuyEasy"

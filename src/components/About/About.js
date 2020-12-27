@@ -29,7 +29,6 @@ const About = () => {
                   </div>
                </div>
                <div className={classes.Final}>
-                  {/* <div>Let's get to the skills</div> */}
                   <div className={classes.Skills}>
                      <SkillTree data={skillsData} />
                   </div>

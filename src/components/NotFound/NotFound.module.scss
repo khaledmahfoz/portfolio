@@ -1,0 +1,21 @@
+@import '../../utils';
+
+div.NotFound{
+   width: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   font-size: 20px;
+   padding: 4em 0;
+   @include flex-center-center-col;
+   .status{
+      font-size: 12em;
+   }
+   p{
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      color: rgba(255, 255, 255, 0.7);
+   }
+   a{
+      @extend .Button;
+   }
+}

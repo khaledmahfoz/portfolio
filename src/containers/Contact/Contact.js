@@ -17,7 +17,8 @@ const Contact = () => {
          configs: {
             type: 'text',
             name: 'name',
-            autoComplete: 'on'
+            autoComplete: 'on',
+            id: 'name'
          },
          validationConfigs: {
             notEmpty: {
@@ -34,7 +35,8 @@ const Contact = () => {
          configs: {
             type: 'email',
             name: 'email',
-            autoComplete: 'on'
+            autoComplete: 'on',
+            id: 'email'
          },
          validationConfigs: {
             isEmail: {
@@ -50,7 +52,8 @@ const Contact = () => {
          errMessage: '',
          configs: {
             name: 'message',
-            type: 'textarea'
+            type: 'textarea',
+            id: 'message'
          },
          validationConfigs: {
             notEmpty: {
@@ -122,7 +125,7 @@ const Contact = () => {
    content = Object.entries(formElems).map(([key, data]) => {
       return (
          <div key={key} className={classes.formItem}>
-            <label>{data.label}</label>
+            <label for={data.configs.id}>{data.label}</label>
             <FormInput
                type={data.configs.type}
                value={data.value}

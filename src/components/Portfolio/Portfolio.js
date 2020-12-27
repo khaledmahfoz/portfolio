@@ -15,14 +15,13 @@ const Portfolio = () => {
 
    const myRef = useRef();
    const warningRef = useRef();
-
    const history = useHistory();
 
    const navigateHandler = (id) => {
       history.push(`/portfolio/${id}`);
    }
 
-   const catageories = ['all', 'static', 'js', 'sass', 'bootstrap', 'nodejs', 'express', 'mongodb', 'reactjs', 'react native'];
+   const catageories = ['all', 'reactjs', 'frontend', 'fullstack', 'nextjs', 'react native'];
 
    const [catageoryState, setCatageoryState] = useState('all');
 
@@ -64,11 +63,12 @@ const Portfolio = () => {
 
    let projects = Object.entries(projectsData).map(([key, data]) => {
       return (
-         <div className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
+         <a onClick={navigateHandler.bind(this, data._id)}
+            className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
             <div className={classes.overlay}>
                <div
                   className={classes.view}
-                  onClick={navigateHandler.bind(this, data._id)}
+               // onClick={navigateHandler.bind(this, data._id)}
                >
                   <img src={view} alt="view" />
                </div>
@@ -78,7 +78,7 @@ const Portfolio = () => {
                <div>{data.name}</div>
                <p>{data.description}</p>
             </div>
-         </div>
+         </a>
 
       )
    })

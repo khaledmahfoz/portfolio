@@ -1,9 +1,8 @@
 @import '../../variables';
 @import '../../utils';
-// $black: #080e24;
-$orbit: #626668;
+
+$orbit: #565b5e;
 $sun: 40px;
-// $sunColor: #F90;
 $sunColor: #FD9A26;
 $earth: 15px;
 
@@ -15,8 +14,6 @@ $orbits: (
          size: 0.5,
          background-color: #ED553B,
          border-color: rgb(211, 67, 42)
-			// background-color: #FFD3A8,
-			// border-color: #FFA579
 		)
 	),
 	2:(
@@ -26,55 +23,8 @@ $orbits: (
          size: 1,
          background-color: #00B9B9,
 			border-color: #005353
-			// background-color: #0058B0,
-			// border-color: #00366C
 		)
 	),
-	// 4:(
-	// 	radius: 400px,
-	// 	delay: 1.2,
-	// 	planets: (
-	// 		size: 0.5,
-	// 		background-color: #B00000,
-	// 		border-color: #600
-	// 	)
-	// ),
-	// 5:(
-	// 	radius: 500px,
-	// 	delay: 1.5,
-	// 	planets: (
-	// 		size: 2.2,
-	// 		background-color: #F60,
-	// 		border-color: #630
-	// 	)
-	// ),
-	// 6:(
-	// 	radius: 600px,
-	// 	delay: 1.7,
-	// 	planets: (
-	// 		size: 1.8,
-	// 		background-color: #C0C0C0,
-	// 		border-color: #838383
-	// 	)
-	// ),
-	// 7:(
-	// 	radius: 700px,
-	// 	delay: 2,
-	// 	planets: (
-	// 		size: 1.3,
-	// 		background-color: #00B9B9,
-	// 		border-color: #005353
-	// 	)
-	// ),
-	// 8:(
-	// 	radius: 800px,
-	// 	delay: 1.8,
-	// 	planets: (
-	// 		size: 1.1,
-	// 		background-color: #00F,
-	// 		border-color: #00009B
-	// 	)
-	// ),
 );
 
 @keyframes sun-shadow {
@@ -92,11 +42,6 @@ $orbits: (
 	@return $speed * 10s;
 }
 
-// @mixin flex-center-center{
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
 
 @mixin absolute-center-center{
 	position: absolute;
@@ -142,20 +87,10 @@ $orbits: (
 		.sun{
 			@include absolute-center-center;
 			@include sub-planets($sun, $sunColor);
-			// background:radial-gradient(circle, #F60, #FC0);
 			box-shadow:0px 0px 50px #F90;
 			animation: sun-shadow 2s ease infinite;
 		}
-		// .ring{
-		// 	position: absolute;
-		// 	top: 50%;
-		// 	left: 50%;
-		// 	transform: translate(-50%, -50%) skewX(-50deg);
-		// 	border: 3px solid #5a4e34;
-		// 	height: 40px;
-		// 	width: 40px;
-      //    border-radius: 50%;
-		// }
+		
 		@each $key, $data in $orbits {
 			$orbitRad: map-get($data, "radius");
 			$orbitDelay: map-get($data, "delay");

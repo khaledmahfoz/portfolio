@@ -5,9 +5,7 @@
    .First{
       margin: auto;
       margin-bottom: 3rem;
-      // @include flex-center-center-col;
       .Info{
-         // padding: 2rem;
          p{
             color: #fff;
             line-height: 1.6;
@@ -16,20 +14,17 @@
             span{
                font-weight: bold;
                color: #f7df1e;
-               // color: $darkGreenColor;
                text-decoration: underline;
             }
          }
          q{
             font-family: 'Bitter', serif;
             font-size: 1.4rem;
-            color: coral;
-            // line-height: 1.2;
+            color: $orangeColor;
          }
       }
       .Img{
          img{
-            // max-width: 500px;
             width: 100%;
             height: auto;
          }
@@ -68,9 +63,7 @@
          }
       }
       .Img{
-         // width: calc(40% - 2rem);
          width: 50%;
-         // margin-right: 2rem;
          height: 100%;
          img{
             height: 100% !important;
@@ -82,14 +75,10 @@
 
 @media(min-width: $xlarge){
    .First{
-      // height: 400px;
-      // background-color: $lightBlueColor;
       @include flex-center-start;
       .Info{
          width: 60%;
-         // padding: 0 1rem;
          padding: 0 2rem 0 0rem;
-         // height: 100%;
          p{
             margin: 0 0 0.5rem;
          }
@@ -99,14 +88,7 @@
          }
       }
       .Img{
-         // height: 100%;
-         // width: calc(40% - 2rem);
          width: 40%;
-         // margin-right: 2rem;
-         // img{
-         //    height: 100% !important;
-         //    width: auto !important;
-         // }
       }
    }
 }

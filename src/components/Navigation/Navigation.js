@@ -19,9 +19,15 @@ const navigation = () => {
                </div>
                <div className={classes.stackedIcon}>Icon</div>
                <ul className={classes.navList}>
-                  <Link destiny="/about-me">About Me</Link>
-                  <Link destiny="/portfolio">Portfolio</Link>
-                  <Link destiny="/contact-me">Contact</Link>
+                  <li>
+                     <Link destiny="/about-me">About Me</Link>
+                  </li>
+                  <li>
+                     <Link destiny="/portfolio">Portfolio</Link>
+                  </li>
+                  <li>
+                     <Link destiny="/contact-me">Contact</Link>
+                  </li>
                </ul>
             </div>
          </Container>
