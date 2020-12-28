@@ -71,7 +71,7 @@ const Portfolio = () => {
                   className={classes.view}
                >
                   <picture>
-                     <source srcset={viewMD} media="(min-width: 500px)" />
+                     <source srcSet={viewMD} media="(min-width: 500px)" />
                      <img srcSet={viewSM} alt="view" />
                   </picture>
                </div>
