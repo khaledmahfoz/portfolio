@@ -4,7 +4,8 @@ import mixItUp from 'mixitup';
 
 import classes from './Portfolio.module.scss';
 
-import view from '../../images/view.png';
+import viewSM from '../../images/view/view_sm.png';
+import viewMD from '../../images/view/view_md.png';
 
 import projectsData from '../../utils/projects.json';
 
@@ -68,9 +69,11 @@ const Portfolio = () => {
             <div className={classes.overlay}>
                <div
                   className={classes.view}
-               // onClick={navigateHandler.bind(this, data._id)}
                >
-                  <img src={view} alt="view" />
+                  <picture>
+                     <source srcset={viewMD} media="(min-width: 500px)" />
+                     <img srcSet={viewSM} alt="view" />
+                  </picture>
                </div>
             </div>
             <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>

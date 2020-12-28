@@ -2,7 +2,8 @@ import React from 'react';
 
 import skillsData from '../../utils/skills.js';
 
-import author from '../../images/author.jpg';
+import authorSM from '../../images/author/author_sm.jpg';
+import authorMD from '../../images/author/author_md.jpg';
 
 import classes from './About.module.scss';
 
@@ -21,7 +22,10 @@ const About = () => {
             <div className={classes.About}>
                <div className={classes.First}>
                   <div className={classes.Img}>
-                     <img src={author} alt="author" />
+                     <picture>
+                        <source srcSet={authorMD} media="(min-width: 500px)" />
+                        <img src={authorSM} alt="author" />
+                     </picture>
                   </div>
                   <div className={classes.Info}>
                      <p>My name is <i><u>khaled mahfoz</u></i>, from egypt and i'm a mern stack developer. i've been in the web development industry since 2016 fighting back to back with <span>js</span> alot of experience was gained and alot yet to come.</p>

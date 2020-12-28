@@ -33,7 +33,7 @@
 }
 .cd_timeline_content_img{
   height: 40px;
-  margin-right: 10px;
+  width: 50px;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -82,7 +82,6 @@
 }
 .cd_timeline_img {
   background: $darkGreenColor;
-
 }
 @media only screen and (min-width: 500px){
   .cd_timeline_img{
@@ -130,6 +129,7 @@
   @media (max-width: 500px) {
     .cd_timeline_content_img{
       height: 35px;
+      width: 40px;
     }
     
   }
