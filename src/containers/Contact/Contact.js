@@ -166,16 +166,16 @@ const Contact = () => {
                      <h3>Feel free to contact me :-</h3>
                      <ul>
                         <li>
-                           <a href="http://github.com/khaledmahfoz" target="_blank">Github</a>
+                           <a href="http://github.com/khaledmahfoz" target="_blank" rel="noopener noreferrer">Github</a>
                         </li>
                         <li>
-                           <a href="https://www.linkedin.com/in/khaled-mahfoz-1b4b3a18b" target="_blank">Linkedin</a>
+                           <a href="https://www.linkedin.com/in/khaled-mahfoz-1b4b3a18b" target="_blank" rel="noopener noreferrer">Linkedin</a>
                         </li>
                         <li>
-                           <a href="https://mail.google.com/mail/u/?authuser=khaledmahfoz20@gmail.com" target="_blank">Email</a>
+                           <a href="https://mail.google.com/mail/u/?authuser=khaledmahfoz20@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
                         </li>
                         <li>
-                           <a href="https://codepen.io/khaledMahfoz" target="_blank">Codepen</a>
+                           <a href="https://codepen.io/khaledMahfoz" target="_blank" rel="noopener noreferrer">Codepen</a>
                         </li>
                      </ul>
                   </div>

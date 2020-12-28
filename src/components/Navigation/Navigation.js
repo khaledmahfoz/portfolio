@@ -14,7 +14,7 @@ const navigation = () => {
             <div className={classes.linksContainer}>
                <div>
                   <Link to="/">
-                     <img style={{height: '30px'}} src={Logo} alt="logo" />
+                     <img style={{height: '30px', width: '30px'}} src={Logo} alt="logo" />
                   </Link>
                </div>
                <div className={classes.stackedIcon}>Icon</div>

@@ -63,7 +63,7 @@ const Portfolio = () => {
 
    let projects = Object.entries(projectsData).map(([key, data]) => {
       return (
-         <a onClick={navigateHandler.bind(this, data._id)}
+         <div onClick={navigateHandler.bind(this, data._id)}
             className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
             <div className={classes.overlay}>
                <div
@@ -78,7 +78,7 @@ const Portfolio = () => {
                <div>{data.name}</div>
                <p>{data.description}</p>
             </div>
-         </a>
+         </div>
 
       )
    })
