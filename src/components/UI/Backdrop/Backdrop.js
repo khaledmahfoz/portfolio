@@ -4,7 +4,7 @@ import classes from './Backdrop.module.scss';
 
 const Backdrop = props => {
    return (
-      <div className={classes.Backdrop}></div>
+      props.isOpen ? <div className={classes.Backdrop} onClick={props.toggleIcon}></div> : null
    );
 };
 

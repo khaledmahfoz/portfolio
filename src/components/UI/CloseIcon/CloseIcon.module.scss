@@ -1,0 +1,40 @@
+@import '../BurgerIcon/BurgerIconMain';
+
+ .close_icon span:nth-child(1),.close_icon span:nth-child(6) {
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   transform: rotate(45deg);
+ }
+ 
+ .close_icon span:nth-child(2),.close_icon span:nth-child(5) {
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+ }
+ 
+ .close_icon span:nth-child(1) {
+   left: 5px;
+   top: 7px;
+ }
+ 
+ .close_icon span:nth-child(2) {
+   left: calc(50% - 5px);
+   top: 7px;
+ }
+ 
+ .close_icon span:nth-child(3), .close_icon span:nth-child(4) {
+    display: none;
+ }
+ 
+ .close_icon span:nth-child(5) {
+   left: 5px;
+   top: 15px;
+ }
+ 
+ .close_icon span:nth-child(6) {
+   left: calc(50% - 5px);
+   top: 15px;
+ }
+ 

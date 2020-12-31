@@ -3,6 +3,7 @@ import {useHistory, useLocation} from 'react-router-dom';
 
 import classes from './SideNav.module.scss';
 import Backdrop from '../UI/Backdrop/Backdrop';
+import CloseIcon from '../UI/CloseIcon/CloseIcon';
 
 const SideNav = props => {
    const location = useLocation();
@@ -42,10 +43,10 @@ const SideNav = props => {
 
    return (
       <>
-         <Backdrop />
-         <div className={classes.SideNav}>
+         <Backdrop toggleIcon={props.toggleIcon} isOpen={props.isOpen} />
+         <div className={`${classes.SideNav} ${!props.isOpen ? classes.closed : ''}`}>
             <div className={classes.CloseIconDiv}>
-               <div>X</div>
+               <CloseIcon toggleIcon={props.toggleIcon} />
             </div>
             <ul>
                {routes.map(route => {

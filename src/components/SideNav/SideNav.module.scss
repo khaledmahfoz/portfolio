@@ -1,22 +1,27 @@
 @import '../../variables';
 
 .SideNav{
+   transform: translateX(0);
+   transition: transform 0.3s;
    font-size: 18px;
    position: absolute;
    left: 0;
    top: 0;
    width: 70%;
+   max-width: 350px;
    height: 100%;
    background-color: $lightBlueColor;
    z-index: 9999999;
+   overflow-y: scroll;
    div.CloseIconDiv{
       width: 100%;
       height: 80px;
       position: relative;
-      div{
+      &>div{
          position: absolute;
          right: 20px;
-         top: 20px;
+         top: 40px;
+         transform: translateY(-50%);
       }
    }
    ul{
@@ -24,14 +29,17 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      li:first-of-type a{
+         border-top: 1px solid rgb(146, 145, 145);
+      }
       li{
-         border-bottom: 1px solid rgb(146, 145, 145);
          font-size: 1.2em;
          a{
             display: block;
-            padding: 25px 0 25px 20px;
+            padding: 30px 0 30px 20px;
             text-decoration: none;
             color: $whiteColor;
+            border-bottom: 1px solid rgb(146, 145, 145);
          }
          a.ActiveLink{
             background-color: $greenColor;
@@ -40,4 +48,7 @@
          }
       }
    }
+}
+.SideNav.closed{
+   transform: translateX(-100%);
 }

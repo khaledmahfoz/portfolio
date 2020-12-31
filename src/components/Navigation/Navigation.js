@@ -10,31 +10,31 @@ import BurgerIcon from '../UI/BurgerIcon/BurgerIcon';
 import SideNav from '../SideNav/SideNav';
 
 const Navigation = () => {
-   const [iconState, changeIconState] = useState(true);
+   const [iconState, changeIconState] = useState(false);
 
    const toggleIcon = () => {
       changeIconState(prevState => !prevState);
    }
 
-   let navigationControlls = (
-      <ul className={classes.navList}>
-         <li>
-            <Link destiny="/about-me" exact>About Me</Link>
-         </li>
-         <li>
-            <Link destiny="/portfolio" exact>Portfolio</Link>
-         </li>
-         <li>
-            <Link destiny="/contact-me" exact>Contact</Link>
-         </li>
-      </ul>
-   );
+   // let navigationControlls = (
+   //    <ul className={classes.navList}>
+   //       <li>
+   //          <Link destiny="/about-me" exact>About Me</Link>
+   //       </li>
+   //       <li>
+   //          <Link destiny="/portfolio" exact>Portfolio</Link>
+   //       </li>
+   //       <li>
+   //          <Link destiny="/contact-me" exact>Contact</Link>
+   //       </li>
+   //    </ul>
+   // );
 
-   if (iconState) {
-      navigationControlls = (
-         <SideNav toggleIcon={toggleIcon} />
-      );
-   }
+   // if (iconState) {
+   //    navigationControlls = (
+   //       <SideNav toggleIcon={toggleIcon} />
+   //    );
+   // }
 
    return (
       <nav className={classes.navigation}>
@@ -46,9 +46,22 @@ const Navigation = () => {
                   </Link>
                </div>
                <div className={classes.stackedIcon} onClick={toggleIcon}>
-                  <BurgerIcon isOpen={iconState} />
+                  <BurgerIcon />
                </div>
-               {navigationControlls}
+               <ul className={classes.navList}>
+                  <li>
+                     <Link destiny="/about-me" exact>About Me</Link>
+                  </li>
+                  <li>
+                     <Link destiny="/portfolio" exact>Portfolio</Link>
+                  </li>
+                  <li>
+                     <Link destiny="/contact-me" exact>Contact</Link>
+                  </li>
+               </ul>
+               <SideNav isOpen={iconState} toggleIcon={toggleIcon} />
+
+               {/* {navigationControlls} */}
             </div>
          </Container>
       </nav>

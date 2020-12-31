@@ -1,10 +1,10 @@
 import React from 'react';
 
-import classes from './BurgerIcon.module.scss';
+import classes from './CloseIcon.module.scss';
 
-const BurgerIcon = () => {
+const CloseIcon = props => {
    return (
-      <div className={classes.nav_icon}>
+      <div className={`${classes.nav_icon} ${classes.close_icon}`} onClick={props.toggleIcon}>
          <span></span>
          <span></span>
          <span></span>
@@ -15,4 +15,4 @@ const BurgerIcon = () => {
    );
 }
 
-export default BurgerIcon;
+export default CloseIcon;
