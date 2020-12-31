@@ -16,26 +16,6 @@ const Navigation = () => {
       changeIconState(prevState => !prevState);
    }
 
-   // let navigationControlls = (
-   //    <ul className={classes.navList}>
-   //       <li>
-   //          <Link destiny="/about-me" exact>About Me</Link>
-   //       </li>
-   //       <li>
-   //          <Link destiny="/portfolio" exact>Portfolio</Link>
-   //       </li>
-   //       <li>
-   //          <Link destiny="/contact-me" exact>Contact</Link>
-   //       </li>
-   //    </ul>
-   // );
-
-   // if (iconState) {
-   //    navigationControlls = (
-   //       <SideNav toggleIcon={toggleIcon} />
-   //    );
-   // }
-
    return (
       <nav className={classes.navigation}>
          <Container>
@@ -60,8 +40,6 @@ const Navigation = () => {
                   </li>
                </ul>
                <SideNav isOpen={iconState} toggleIcon={toggleIcon} />
-
-               {/* {navigationControlls} */}
             </div>
          </Container>
       </nav>

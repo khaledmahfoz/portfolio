@@ -1,21 +1,42 @@
+@import '../../variables';
 @import '../../utils';
 
 div.NotFound{
    width: 100%;
-   max-width: 500px;
+   // max-width: 400px;
    margin: 0 auto;
-   font-size: 20px;
-   padding: 4em 0;
+   font-size: 18px;
+   padding: 4em 2em;
    @include flex-center-center-col;
    .status{
-      font-size: 12em;
+      font-size: 8em;
    }
    p{
-      margin-bottom: 1em;
-      font-size: 1.5em;
+      margin-bottom: 40px;
+      font-size: 1.2em;
       color: rgba(255, 255, 255, 0.7);
    }
    a{
       @extend .Button;
+      max-width: 400px;
+   }
+}
+
+@media(min-width: $small){
+   div.NotFound{
+      font-size: 22px;
+   }
+
+}
+
+@media(min-width: $medium){
+   div.NotFound{
+      font-size: 26px;
+   }
+}
+
+@media(min-width: $large){
+   div.NotFound{
+      font-size: 30px;
    }
 }

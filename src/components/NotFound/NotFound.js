@@ -8,7 +8,7 @@ const notFound = () => {
       <div>
          <div className={classes.NotFound}>
             <div className={classes.status}>404</div>
-            <p>Something went wrong!, as usual</p>
+            <p>Something went wrong! (as usual)</p>
             <Link to="/">Get me out of here</Link>
          </div>
       </div>
