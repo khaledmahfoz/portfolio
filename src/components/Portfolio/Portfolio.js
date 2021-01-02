@@ -7,12 +7,14 @@ import classes from './Portfolio.module.scss';
 import viewSM from '../../images/view/view_sm.png';
 import viewMD from '../../images/view/view_md.png';
 
+import {values} from '../../utils/polyfill_Object';
 import projectsData from '../../utils/projects.json';
 
 import Section from '../Section/Section';
 import Container from '../UI/Container/Container';
 
 const Portfolio = () => {
+   values();
 
    const myRef = useRef();
    const warningRef = useRef();
@@ -61,19 +63,7 @@ const Portfolio = () => {
       );
    });
 
-   if (!Object.entries) {
-      Object.entries = function (obj) {
-         var ownProps = Object.keys(obj),
-            i = ownProps.length,
-            resArray = new Array(i);
-
-         while (i--)
-            resArray[i] = [ownProps[i], obj[ownProps[i]]];
-         return resArray;
-      };
-   }
-
-   let projects = Object.entries(projectsData).map(([key, data]) => {
+   let projects = Object.values(projectsData).map(data => {
       return (
          <div onClick={navigateHandler.bind(this, data._id)}
             className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>

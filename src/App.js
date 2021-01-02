@@ -8,6 +8,7 @@ import stars from './images/stars.svg';
 
 import Layout from './components/Layout/Layout';
 import LazyLoad from './containers/Lazy/Lazy';
+import ErrorBoundry from './containers/ErrorBoundry/ErrorBoundry';
 const Home = lazy(() => import('./components/Home/Home'));
 const About = lazy(() => import('./components/About/About'));
 const Portfolio = lazy(() => import('./components/Portfolio/Portfolio'));
@@ -29,28 +30,31 @@ function App() {
             timeout={300}
           >
             <div className="page" style={{backgroundImage: `url(${stars})`}}>
-              <Suspense fallback={<LazyLoad />}>
-                <Switch location={location}>
-                  <Route path="/" exact>
-                    <Home />
-                  </Route>
-                  <Route path="/about-me">
-                    <About />
-                  </Route>
-                  <Route exact path="/portfolio">
-                    <Portfolio />
-                  </Route>
-                  <Route path="/portfolio/:id">
-                    <Project />
-                  </Route>
-                  <Route path="/contact-me">
-                    <Contact />
-                  </Route>
-                  <Route>
-                    <NotFound />
-                  </Route>
-                </Switch>
-              </Suspense>
+              <ErrorBoundry>
+
+                <Suspense fallback={<LazyLoad />}>
+                  <Switch location={location}>
+                    <Route path="/" exact>
+                      <Home />
+                    </Route>
+                    <Route exact path="/about-me">
+                      <About />
+                    </Route>
+                    <Route exact path="/portfolio">
+                      <Portfolio />
+                    </Route>
+                    <Route path="/portfolio/:id">
+                      <Project />
+                    </Route>
+                    <Route exact path="/contact-me">
+                      <Contact />
+                    </Route>
+                    <Route>
+                      <NotFound />
+                    </Route>
+                  </Switch>
+                </Suspense>
+              </ErrorBoundry>
             </div>
           </CSSTransition>
         </TransitionGroup>

@@ -10,16 +10,16 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 import classes from './Project.module.scss';
 
+import {entries, values} from '../../utils/polyfill_Object';
 import projectsData from '../../utils/projects.json';
 
 import Section from '../../components/Section/Section';
 import Container from '../../components/UI/Container/Container';
 
-Object.values = Object.values ? Object.values : o => Object.keys(o).map(k => o[k]);
-
 const Project = () => {
+   values();
+   entries();
    let {id} = useParams();
-
    const [project] = Object.values(projectsData).filter(prj => {
       return prj._id === id;
    })

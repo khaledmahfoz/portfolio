@@ -2,12 +2,16 @@ import React, {useState} from 'react';
 
 import classes from './Contact.module.scss';
 
+import {entries, values} from '../../utils/polyfill_Object';
+
 import Container from '../../components/UI/Container/Container';
 import FormInput from '../../components/FormInput/FormInput';
 import Button from '../../components/UI/Button/Button';
 import Section from '../../components/Section/Section';
 
 const Contact = () => {
+   values();
+   entries();
    const formElemsObj = {
       name: {
          label: 'Please enter your name',
