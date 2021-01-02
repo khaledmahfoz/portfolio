@@ -76,9 +76,9 @@ $orbits: (
 }
 
 .SolarSystem{
-   width: 40%;
+	width: 100%;
    height: 250px;
-   margin: 0 auto;
+   margin: 30px auto 30px;
 	.content{
       width: 100%;
       height: 100%;
@@ -114,8 +114,9 @@ $orbits: (
 	}
 }
 
-@media(min-width: $xlarge){
+@media(min-width: $large){
    .SolarSystem{
-      margin: 0;
+		width: 40%;
+		margin: 0;
    }
 }
