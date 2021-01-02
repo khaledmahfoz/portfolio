@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import classes from './Navigation.module.scss'
 
-import Logo from '../../images/Logo.svg';
+import Logo from '../UI/Logo/Logo';
 
 import Link from '../Link/Link';
 import Container from '../UI/Container/Container';
@@ -15,6 +15,14 @@ const Navigation = () => {
    const toggleIcon = () => {
       changeIconState(prevState => !prevState);
    }
+
+
+   useEffect(() => {
+      if (iconState) {
+         document.body.style.overflow = 'hidden';
+      }
+      return () => document.body.style.overflow = 'unset';
+   }, [iconState])
 
    // let navigationControlls = (
    //    <ul className={classes.navList}>
@@ -42,7 +50,7 @@ const Navigation = () => {
             <div className={classes.linksContainer}>
                <div>
                   <Link to="/">
-                     <img style={{height: '30px', width: '30px'}} src={Logo} alt="logo" />
+                     <Logo />
                   </Link>
                </div>
                <div className={classes.stackedIcon} onClick={toggleIcon}>
