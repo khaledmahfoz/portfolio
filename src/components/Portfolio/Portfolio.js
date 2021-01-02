@@ -61,6 +61,17 @@ const Portfolio = () => {
       );
    });
 
+   if (!Object.entries) {
+      Object.entries = function (obj) {
+         var ownProps = Object.keys(obj),
+            i = ownProps.length,
+            resArray = new Array(i);
+
+         while (i--)
+            resArray[i] = [ownProps[i], obj[ownProps[i]]];
+         return resArray;
+      };
+   }
 
    let projects = Object.entries(projectsData).map(([key, data]) => {
       return (

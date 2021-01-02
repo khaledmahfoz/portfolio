@@ -15,6 +15,8 @@ import projectsData from '../../utils/projects.json';
 import Section from '../../components/Section/Section';
 import Container from '../../components/UI/Container/Container';
 
+Object.values = Object.values ? Object.values : o => Object.keys(o).map(k => o[k]);
+
 const Project = () => {
    let {id} = useParams();
 
