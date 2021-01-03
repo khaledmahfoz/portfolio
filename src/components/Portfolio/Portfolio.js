@@ -5,7 +5,6 @@ import mixItUp from 'mixitup';
 import classes from './Portfolio.module.scss';
 
 import viewSM from '../../images/view/view_sm.png';
-import viewMD from '../../images/view/view_md.png';
 
 import {values} from '../../utils/polyfill_Object';
 import projectsData from '../../utils/projects.json';
@@ -15,7 +14,6 @@ import Container from '../UI/Container/Container';
 
 const Portfolio = () => {
    values();
-
    const myRef = useRef();
    const warningRef = useRef();
    const history = useHistory();
@@ -31,8 +29,10 @@ const Portfolio = () => {
    useEffect(() => {
       mixItUp(myRef.current, {
          animation: {
-            effects: 'fade scale(0.1)',
-            duration: 200
+            duration: 300,
+            nudge: true,
+            effects: "fade scale(0.01) translateZ(-100px)",
+            clampHeight: window.matchMedia('(min-width: 768px)').matches ? false : true,
          },
          callbacks: {
             onMixEnd: function (state) {
@@ -43,7 +43,7 @@ const Portfolio = () => {
                   warningRef.current.classList.remove(classes.warningShow);
                }
             }
-         }
+         },
       });
    }, []);
 
@@ -57,6 +57,7 @@ const Portfolio = () => {
             className={`${classes.ButtonCustom} ${catageoryState === elem ? classes.ButtonBlueprintEffect : ''} filter`}
             onClick={() => changeCatageory(elem)}
             data-filter={`.${elem}`}
+            data-sort="order:asc"
          >
             {elem}
          </li>
@@ -66,18 +67,17 @@ const Portfolio = () => {
    let projects = Object.values(projectsData).map(data => {
       return (
          <div onClick={navigateHandler.bind(this, data._id)}
-            className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id}>
+            className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id} data-order={data._id}>
             <div className={classes.overlay}>
                <div
                   className={classes.view}
                >
-                  <picture>
-                     <source srcSet={viewMD} media="(min-width: 500px)" />
-                     <img srcSet={viewSM} alt="view" />
-                  </picture>
+                  <img srcSet={viewSM} alt="view" />
                </div>
             </div>
-            <div className={classes.img} style={{backgroundImage: `url(${data.carousel[0]})`}}></div>
+            <div className={classes.img}>
+               <img src={data.carousel[0]} alt={data.alt} />
+            </div>
             <div className={classes.info}>
                <div>{data.name}</div>
                <p>{data.description}</p>
@@ -99,10 +99,16 @@ const Portfolio = () => {
                <div className={classes.portfolioController}>
                   <ul>{content}</ul>
                </div>
-               <div className={`${classes.warning} ${classes.warningHide}`} ref={warningRef}>stay tuned</div>
+               <div
+                  className={`${classes.warning} ${classes.warningHide}`}
+                  ref={warningRef}
+               >
+                  stay tuned
+                  </div>
                <div className={classes.projects} ref={myRef}>
                   {projects}
                </div>
+
             </div>
          </Container>
       </div>

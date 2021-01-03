@@ -3,6 +3,7 @@
       "_id": "1",
       "name": "Shop Easy",
       "description": "online shopping app",
+      "alt": "shopping_app",
       "carousel": [
          "https://i.imgur.com/mSSGZfl.png",
          "https://i.imgur.com/WDJBUH8.png",
@@ -26,6 +27,7 @@
       "_id": "2",
       "name": "Order Easy",
       "description": "online food ordering app",
+      "alt": "food_app",
       "carousel": [
          "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/1.PNG",
          "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/2.PNG",
@@ -52,6 +54,7 @@
       "_id": "3",
       "name": "Search movies",
       "description": "search movies app",
+      "alt": "search_movies",
       "carousel": [
          "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/4.PNG",
          "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/5.PNG"
@@ -74,6 +77,7 @@
    "project4": {
       "_id": "4",
       "name": "Camrise",
+      "alt": "photographer",
       "description": "photographer landing page",
       "carousel": [
          "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/6.PNG"
