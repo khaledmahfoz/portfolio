@@ -3,12 +3,43 @@
       "_id": "1",
       "name": "Shop Easy",
       "description": "online shopping app",
+      "features": [
+         {
+            "label": "client features",
+            "list": [
+               "ordering food from resturants near you as it location based.",
+               "add your own reviews (review per order).",
+               "guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
+            ]
+         },
+         {
+            "label": "admin features",
+            "list": [
+               "creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
+               "creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
+               "menu are catageory based",
+               "checkout your customers reviews devided into reviewed and non-reviewed."
+            ]
+         }
+      ],
       "alt": "shopping_app",
       "carousel": [
-         "https://i.imgur.com/mSSGZfl.png",
-         "https://i.imgur.com/WDJBUH8.png",
-         "https://i.imgur.com/Nm9vgPo.png",
-         "https://i.imgur.com/074YotN.png"
+         {
+            "src": "https://i.imgur.com/mSSGZfl.png",
+            "alt": ""
+         },
+         {
+            "src": "https://i.imgur.com/WDJBUH8.png",
+            "alt": ""
+         },
+         {
+            "src": "https://i.imgur.com/Nm9vgPo.png",
+            "alt": ""
+         },
+         {
+            "src": "https://i.imgur.com/074YotN.png",
+            "alt": ""
+         }
       ],
       "techs": [
          "fullstack",
@@ -27,11 +58,39 @@
       "_id": "2",
       "name": "Order Easy",
       "description": "online food ordering app",
+      "features": [
+         {
+            "label": "client features",
+            "list": [
+               "ordering food from resturants near you as it location based.",
+               "add your own reviews (review per order).",
+               "guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
+            ]
+         },
+         {
+            "label": "admin features",
+            "list": [
+               "creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
+               "creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
+               "menu are catageory based",
+               "checkout your customers reviews devided into reviewed and non-reviewed."
+            ]
+         }
+      ],
       "alt": "food_app",
       "carousel": [
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/1.PNG",
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/2.PNG",
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/3.PNG"
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/1.PNG",
+            "alt": "home"
+         },
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/2.PNG",
+            "alt": "gps_modal"
+         },
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/3.PNG",
+            "alt": "sign_modal"
+         }
       ],
       "techs": [
          "fullstack",
@@ -54,10 +113,35 @@
       "_id": "3",
       "name": "Search movies",
       "description": "search movies app",
+      "features": [
+         {
+            "label": "client features",
+            "list": [
+               "ordering food from resturants near you as it location based.",
+               "add your own reviews (review per order).",
+               "guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
+            ]
+         },
+         {
+            "label": "admin features",
+            "list": [
+               "creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
+               "creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
+               "menu are catageory based",
+               "checkout your customers reviews devided into reviewed and non-reviewed."
+            ]
+         }
+      ],
       "alt": "search_movies",
       "carousel": [
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/4.PNG",
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/5.PNG"
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/4.PNG",
+            "alt": ""
+         },
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/5.PNG",
+            "alt": ""
+         }
       ],
       "techs": [
          "fullstack",
@@ -77,10 +161,32 @@
    "project4": {
       "_id": "4",
       "name": "Camrise",
+      "features": [
+         {
+            "label": "client features",
+            "list": [
+               "ordering food from resturants near you as it location based.",
+               "add your own reviews (review per order).",
+               "guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
+            ]
+         },
+         {
+            "label": "admin features",
+            "list": [
+               "creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
+               "creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
+               "menu are catageory based",
+               "checkout your customers reviews devided into reviewed and non-reviewed."
+            ]
+         }
+      ],
       "alt": "photographer",
       "description": "photographer landing page",
       "carousel": [
-         "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/6.PNG"
+         {
+            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/6.PNG",
+            "alt": ""
+         }
       ],
       "techs": [
          "frontend",

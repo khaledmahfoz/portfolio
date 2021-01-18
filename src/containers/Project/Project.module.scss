@@ -2,33 +2,69 @@
 @import '../../utils';
 
 .Project{
-   padding: 100px 0rem;
+   padding: 30px 0rem;
    margin: auto;
    .ProjectMain{
       margin-bottom: 50px;
       .Carousel{
          width: 100%;
-         height: 400px;
+         height: 60vw;
          margin-bottom: 50px;
          .Slide{
-            @include flex-center-center;
             width: 100%;
             height: 100%;
-            background-position: center;
-            background-size: cover;
+            .SlideImg{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
          }
-         
       }
       .Description{
-         .DescriptionTitle{
-            font-size: 30px;
-            font-weight: bold;
-            color: $greenColor;
+         text-transform: capitalize;
+         .Description_Section{
+            margin-bottom: 2.5em;
+            .Description_Section_Title{
+               font-size: 1.4em;
+               font-weight: bold;
+               color: $greenColor;
+               margin-bottom: 0.7em;
+            }
+            p{
+               font-size: 1.1em;
+               padding-left: 1em;
+               margin: 0;
+            }
+            .Description_Section_Feature{
+               margin-bottom: 1.5em;
+               div{
+                  font-size: 1.1em;
+                  padding-left: 1em;
+               }
+               ul{
+                  text-transform: lowercase;
+                  line-height: 2em;
+                  padding-left: 3em;
+                  list-style: none;
+                  color: hsla(0,0%,100%,.8);
+                  word-wrap: normal;
+                  word-spacing: 1px;
+                  li::before{
+                     content: ">_ ";
+                     font-size: 1.2em;
+                  }
+               }
+            }
          }
       }
    }
    .ProjectSide{
       span{
+         text-transform: capitalize;
+         font-size: 1em;
          background-color: $darkBlueColor;
          margin: 5px;
          &:hover{
@@ -37,32 +73,44 @@
          }
       }
       .Title{
-         font-size: 22px;
+         font-size: 1.3em;
          text-transform: capitalize;
          font-weight: bold;
          margin-bottom: 20px;
       }
       .Link{
-         margin-bottom: 1rem;
+         margin-bottom: 1em;
          div{
             text-transform: capitalize;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.5em;
          }
       }
       .Demo{
          text-decoration: none;
          color: $greenColor;
-         font-size: 1.2rem;
+         font-size: 1.1em;
          word-break: break-all;
+      }
+   }
+}
+
+
+@media(min-width: $small){
+   .Project{
+      .ProjectMain{
+         .Carousel{
+            height: 350px;
+         }
       }
    }
 }
 
 @media(min-width: $medium){
    .Project{
+      font-size: 18px;
       .ProjectMain{
          .Carousel{
-            height: 500px;
+            height: 450px;
          }
       }
    }
@@ -70,11 +118,7 @@
 
 @media(min-width: $large){
    .Project{
-      .ProjectMain{
-         .Carousel{
-            height: 600px;
-         }
-      }
+      font-size: 20px;
    }
 }
 
@@ -84,9 +128,6 @@
       .ProjectMain{
          width: 60%;
          padding-right: 50px;
-         .Carousel{
-            height: 500px;
-         }
       }
       .ProjectSide{
          width: 40%;

@@ -3,7 +3,7 @@
 .Container{
    width: 100%;
    margin: auto;
-   padding: 0 2rem;
+   padding: 0 1rem;
 }
 
 @media (min-width: $small){
@@ -27,6 +27,6 @@
 @media (min-width: $xlarge){
    .Container{
       max-width: 1200px;
-      padding: 0 2rem;
+      padding: 0 1rem;
    }
 }

@@ -29,8 +29,8 @@ const Project = () => {
    const carouselArr = project.carousel.map((elem, i) => {
       return (
          <SwiperSlide key={i}>
-            <div className={classes.Slide} style={{backgroundImage: `url(${elem})`}}>
-               {/* <img src={elem} alt="" /> */}
+            <div className={classes.Slide} >
+               <img src={elem.src} alt={elem.alt} className={classes.SlideImg}/>
             </div>
          </SwiperSlide>
       );
@@ -52,8 +52,36 @@ const Project = () => {
                      </Swiper>
                   </div>
                   <div className={classes.Description}>
-                     <div className={classes.DescriptionTitle}>Project Description:</div>
-                     <p>{project.description}</p>
+                     <div className={classes.Description_Section}>
+                        <div className={classes.Description_Section_Title}>
+                           Project Name:
+                        </div>
+                        <p>{project.name}</p>
+                     </div>
+
+                     <div className={classes.Description_Section}>
+                        <div className={classes.Description_Section_Title}>
+                           Project Description:
+                        </div>
+                        <p>{project.description}</p>
+                     </div>
+
+                     <div className={classes.Description_Section}>
+                        <div className={classes.Description_Section_Title}>
+                           Features:
+                        </div>
+                        {project.features.map((elem, i) => {
+                           return (
+                              <div key={i} className={classes.Description_Section_Feature}>
+                                 <div>{elem.label}:</div>
+                                 <ul>
+                                    {elem.list.map((elem, i) => <li key={i}>{elem}</li>)}
+                                 </ul>
+                              </div>
+                           );
+                        })}
+                     </div>
+                     
                   </div>
                </div>
                <div className={classes.ProjectSide}>

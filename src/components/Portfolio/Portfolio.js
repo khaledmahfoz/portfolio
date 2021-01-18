@@ -31,8 +31,7 @@ const Portfolio = () => {
          animation: {
             duration: 300,
             nudge: true,
-            effects: "fade scale(0.01) translateZ(-100px)",
-            clampHeight: window.matchMedia('(min-width: 768px)').matches ? false : true,
+            effects: "scale(0.01)"
          },
          callbacks: {
             onMixEnd: function (state) {
@@ -76,7 +75,7 @@ const Portfolio = () => {
                </div>
             </div>
             <div className={classes.img}>
-               <img src={data.carousel[0]} alt={data.alt} />
+               <img src={data.carousel[0].src} alt={data.alt} />
             </div>
             <div className={classes.info}>
                <div>{data.name}</div>
