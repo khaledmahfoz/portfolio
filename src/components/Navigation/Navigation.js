@@ -33,9 +33,9 @@ const Navigation = () => {
                      <Logo />
                   </Link>
                </div>
-               <div className={classes.stackedIcon} onClick={toggleIcon}>
+               <button className={classes.stackedIcon} onClick={toggleIcon}>
                   <BurgerIcon />
-               </div>
+               </button>
                <ul className={classes.navList}>
                   <li>
                      <Link destiny="/about-me" exact>About Me</Link>

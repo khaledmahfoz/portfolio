@@ -162,12 +162,12 @@ const Contact = () => {
                         styles={classes.Button}
                      >
                         Send Now
-                  </Button>
+                     </Button>
                   </form>
                </div>
                <div className={classes.contactInfo}>
                   <div className={classes.contactInfoBody}>
-                     <h3>Feel free to contact me :-</h3>
+                     <h3>Feel free to contact me</h3>
                      <ul>
                         <li>
                            <a href="http://github.com/khaledmahfoz" target="_blank" rel="noopener noreferrer">Github</a>

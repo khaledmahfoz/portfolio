@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 
 import classes from './SideNav.module.scss';
@@ -11,6 +11,10 @@ import Logo from '../UI/Logo/Logo';
 
 const SideNav = props => {
    const location = useLocation();
+   useEffect(() => {
+      changePathState(location.pathname);
+   }, [location.pathname])
+
 
    const [pathState, changePathState] = useState(location.pathname);
 
@@ -18,7 +22,7 @@ const SideNav = props => {
 
    const navigateHandler = (path) => {
       props.toggleIcon();
-      changePathState(path);
+      // changePathState(path);
       history.push(path);
    };
 
@@ -53,18 +57,18 @@ const SideNav = props => {
             style={{backgroundImage: `url(${stars})`}}>
             <div className={classes.CloseIconDiv}>
                <div><Logo /></div>
-               <CloseIcon toggleIcon={props.toggleIcon} />
+               <div>
+                  <CloseIcon toggleIcon={props.toggleIcon} />
+               </div>
             </div>
             <ul>
                {routes.map(route => {
                   return (
-                     <li
-                        key={route.id}
-                        onClick={navigateHandler.bind(this, route.path)}
-                        className={pathState === route.path ? classes.ActiveLink : ''}
-                     >
-                        {route.name}
-
+                     <li key={route.id}>
+                        <button onClick={navigateHandler.bind(this, route.path)}
+                        className={pathState === route.path ? classes.ActiveLink : ''}>
+                           {route.name}
+                        </button>
                      </li>
                   );
                })}

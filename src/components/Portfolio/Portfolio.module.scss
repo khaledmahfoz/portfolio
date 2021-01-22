@@ -43,6 +43,9 @@
          width: 100%;
          margin-bottom: 2rem;
          overflow: hidden;
+         border: none;
+         background: none;
+         text-align: left;
          &:hover{
             .overlay{
                transform: translateY(100%);
@@ -92,6 +95,7 @@
             div{
                font-size: 1.1em;
                margin-bottom: 7px;
+               color: $whiteColor;
             }
             p{
                font-size: 0.9em;

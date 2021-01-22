@@ -49,39 +49,46 @@ const Portfolio = () => {
    const changeCatageory = (elem) => {
       setCatageoryState(elem);
    }
+
    const content = catageories.map(elem => {
       return (
          <li
             key={elem}
-            className={`${classes.ButtonCustom} ${catageoryState === elem ? classes.ButtonBlueprintEffect : ''} filter`}
+            style={{display: 'inline-block'}}
+         >
+            <button className={`${classes.ButtonCustom} ${catageoryState === elem ? classes.ButtonBlueprintEffect : ''} filter`}
             onClick={() => changeCatageory(elem)}
             data-filter={`.${elem}`}
-            data-sort="order:asc"
-         >
-            {elem}
+            data-sort="order:asc">
+               {elem}
+            </button>
          </li>
       );
    });
 
    let projects = Object.values(projectsData).map(data => {
       return (
-         <div onClick={navigateHandler.bind(this, data._id)}
-            className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`} key={data._id} data-order={data._id}>
-            <div className={classes.overlay}>
-               <div
-                  className={classes.view}
-               >
-                  <img srcSet={viewSM} alt="view" />
+         <button 
+            key={data._id}
+            onClick={navigateHandler.bind(this, data._id)}
+            className={`${classes.project} ${data.techs.map(item => item).join(' ')} mix all`}
+            data-order={data._id}
+         >
+            <div>
+               <div className={classes.overlay}>
+                  <div className={classes.view}>
+                     <img srcSet={viewSM} alt="view" />
+                  </div>
+               </div>
+               <div className={classes.img}>
+                  <img src={data.carousel[0].src} alt={data.alt} />
+               </div>
+               <div className={classes.info}>
+                  <div>{data.name}</div>
+                  <p>{data.description}</p>
                </div>
             </div>
-            <div className={classes.img}>
-               <img src={data.carousel[0].src} alt={data.alt} />
-            </div>
-            <div className={classes.info}>
-               <div>{data.name}</div>
-               <p>{data.description}</p>
-            </div>
-         </div>
+         </button>
 
       )
    })
@@ -103,7 +110,7 @@ const Portfolio = () => {
                   ref={warningRef}
                >
                   stay tuned
-                  </div>
+               </div>
                <div className={classes.projects} ref={myRef}>
                   {projects}
                </div>

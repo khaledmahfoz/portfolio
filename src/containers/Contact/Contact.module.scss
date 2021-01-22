@@ -1,22 +1,18 @@
 @import '../../variables';
 @import '../../utils';
 
-.wrapper{
-   max-width: 1400px;
-   margin: 0 auto;
-}
-
 .contact{
+   font-size: 18px;
    .contactForm{
       margin-bottom: 50px;
       form{
          background-color: $darkBlueColor;
          .formItem{
-            margin-bottom: 2rem;
+            margin-bottom: 2em;
             label{
                display: block;
-               font-size: 1.3rem;
-               margin-bottom: 1rem;
+               font-size: 1.1em;
+               margin-bottom: 1em;
             }
             input, textarea{
                width: 100%;
@@ -39,15 +35,18 @@
    }
    .contactInfo{
       padding-bottom: 50px;
+      h3{
+         font-size: 1.2em;
+      }
       ul{
          margin: 0;
          li{
-            margin-top: 1.5rem;
+            margin-top: 1.5em;
+            font-size: 1.1em;
             a, a:active{
                text-decoration: none;
                color: $greenColor;
                font-weight: bold;
-               font-size: 1.1rem;
             }
          }
       }
@@ -59,18 +58,16 @@
       @include flex-center-start;
       padding: 0;
       padding-bottom: 50px;
-      margin: 0 auto;
-      max-width: 1400px;
+      font-size: 20px;
+      padding-top: 30px;
       .contactForm{
-         width: 50%;
+         width: 60%;
          margin-bottom: 0px;
          form{
             max-width: 500px;            
             .formItem{
-               margin-bottom: 2rem;
                label{
                   display: block;
-                  margin-bottom: 1rem;
                }
                input, textarea{
                   width: 100%;
@@ -88,28 +85,36 @@
          }
       }
       .contactInfo{
-         width: 50%;
-         padding-left: 2rem;
+         width: 40%;
+         padding-left: 2em;
          .contactInfoBody{
             max-width: 500px;
             h3{
                margin-top: 0;
-               font-size: 1.5rem;
                font-weight: normal;
             }
             ul{
                margin: 0;
                li{
-                  margin-top: 1.5rem;
                   a, a:active{
                      text-decoration: none;
                      color: $greenColor;
                      font-weight: bold;
-                     font-size: 1.1rem;
                   }
                }
             }
          }
       }
    }  
+}
+
+@media(min-width: $xlarge){
+   .contact{
+      .contactForm{
+         width: 50%;
+      }
+      .contactInfo{
+         width: 50%;
+      }
+   }
 }

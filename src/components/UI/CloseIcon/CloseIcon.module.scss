@@ -1,5 +1,12 @@
 @import '../BurgerIcon/BurgerIconMain';
 
+.close_icon{
+  background: none;
+  border: none;
+  width: 35px;
+  height: 25px;
+}
+
  .close_icon span:nth-child(1),.close_icon span:nth-child(6) {
    -webkit-transform: rotate(45deg);
    -moz-transform: rotate(45deg);
