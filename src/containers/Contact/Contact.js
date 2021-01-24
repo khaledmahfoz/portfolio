@@ -96,23 +96,23 @@ const Contact = () => {
 
    }
 
-   const encode = (data) => {
-      return Object.keys(data)
-         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-         .join("&");
-   }
+   // const encode = (data) => {
+   //    return Object.keys(data)
+   //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+   //       .join("&");
+   // }
 
 
-   const submitHandler = (e) => {
-      fetch("/", {
-         method: "POST",
-         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-         body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
-       })
-         .then(() => alert("Success!"))
-         .catch(error => alert(error));
-      e.preventDefault();
-   }
+   // const submitHandler = (e) => {
+   //    fetch("/", {
+   //       method: "POST",
+   //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+   //       body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
+   //     })
+   //       .then(() => alert("Success!"))
+   //       .catch(error => alert(error));
+   //    e.preventDefault();
+   // }
 
    const changeHandler = (e) => {
       const {name, value} = e.target;
@@ -173,7 +173,13 @@ const Contact = () => {
          <Container>
             <div className={classes.contact}>
                <div className={classes.contactForm}>
-                  <form onSubmit={submitHandler}>
+                  <form 
+                     name="contact" 
+                     method="post" 
+                     data-netlify="true" 
+                     onSubmit="sumbit" 
+                     data-netlify-honeypot="bot-field"
+                  >
                      <input type="hidden" name="form-name" value="contact" />  
                      {content}
                      <Button
