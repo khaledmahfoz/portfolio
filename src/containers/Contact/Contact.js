@@ -174,8 +174,9 @@ const Contact = () => {
             <div className={classes.contact}>
                <div className={classes.contactForm}>
                   <form 
-                     name="contact" 
-                     method="post" 
+                     name="contact"
+                     action="/contact-me" 
+                     method="post"
                      data-netlify="true" 
                      onSubmit="sumbit" 
                      data-netlify-honeypot="bot-field"
