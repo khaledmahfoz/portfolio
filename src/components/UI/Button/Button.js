@@ -2,7 +2,7 @@ import React from 'react'
 
 const button = props => {
    return (
-      <button className={props.styles} disabled={!props.isEnabled}>
+      <button {...props.configs} className={props.styles} disabled={!props.isEnabled}>
          {props.children}
       </button>
    )

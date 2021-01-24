@@ -155,9 +155,10 @@ const Contact = () => {
          <Container>
             <div className={classes.contact}>
                <div className={classes.contactForm}>
-                  <form>
+                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                      {content}
                      <Button
+                        configs={{type: 'submit'}}
                         isEnabled={formValidity}
                         styles={classes.Button}
                      >
