@@ -104,7 +104,7 @@ const Contact = () => {
 
 
    const submitHandler = (e) => {
-      fetch("/", {
+      fetch("/contact-me", {
          method: "POST",
          headers: { "Content-Type": "application/x-www-form-urlencoded" },
          body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
