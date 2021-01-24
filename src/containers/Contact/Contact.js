@@ -104,7 +104,7 @@ const Contact = () => {
 
 
    const submitHandler = (e) => {
-      fetch("/contact-me", {
+      fetch("/", {
          method: "POST",
          headers: { "Content-Type": "application/x-www-form-urlencoded" },
          body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
@@ -174,6 +174,7 @@ const Contact = () => {
             <div className={classes.contact}>
                <div className={classes.contactForm}>
                   <form onSubmit={submitHandler}>
+                     <input type="hidden" name="form-name" value="contact" />  
                      {content}
                      <Button
                         configs={{type: 'submit'}}
