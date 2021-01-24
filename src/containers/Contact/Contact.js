@@ -96,6 +96,24 @@ const Contact = () => {
 
    }
 
+   const encode = (data) => {
+      return Object.keys(data)
+         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+         .join("&");
+   }
+
+
+   const submitHandler = (e) => {
+      fetch("/", {
+         method: "POST",
+         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+         body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
+       })
+         .then(() => alert("Success!"))
+         .catch(error => alert(error));
+      e.preventDefault();
+   }
+
    const changeHandler = (e) => {
       const {name, value} = e.target;
       const updatedState = {...formElems};
@@ -155,7 +173,7 @@ const Contact = () => {
          <Container>
             <div className={classes.contact}>
                <div className={classes.contactForm}>
-                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                  <form onSubmit={submitHandler}>
                      {content}
                      <Button
                         configs={{type: 'submit'}}
