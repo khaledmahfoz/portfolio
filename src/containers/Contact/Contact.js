@@ -96,23 +96,39 @@ const Contact = () => {
 
    }
 
-   // const encode = (data) => {
-   //    return Object.keys(data)
-   //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-   //       .join("&");
-   // }
+   const encode = (data) => {
+      return Object.keys(data)
+         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+         .join("&");
+   }
 
 
-   // const submitHandler = (e) => {
-   //    fetch("/", {
-   //       method: "POST",
-   //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-   //       body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
-   //     })
-   //       .then(() => alert("Success!"))
-   //       .catch(error => alert(error));
-   //    e.preventDefault();
-   // }
+   const emptyFields = () => {
+      const updatedState = {...formElems};
+      Object.keys(updatedState).forEach(name => {
+         const updatedField = {...updatedState[name]};
+         updatedField.value = '';
+         updatedState[name] = updatedField;
+      });
+      formElemsHandler(updatedState);
+   }
+
+   const submitHandler = (e) => {
+      fetch("/", {
+         method: "POST",
+         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+         body: encode({ "form-name": "contact", name: formElems.name.value, email: formElems.email.value, message: formElems.message.value })
+       })
+         .then(() => {
+            emptyFields();
+            alert("Thank you");
+         })
+         .catch(error => {
+            emptyFields();
+            alert(error);
+         });
+      e.preventDefault();
+   }
 
    const changeHandler = (e) => {
       const {name, value} = e.target;
@@ -173,15 +189,8 @@ const Contact = () => {
          <Container>
             <div className={classes.contact}>
                <div className={classes.contactForm}>
-                  <form 
-                     name="contact"
-                     action="/contact-me" 
-                     method="post"
-                     data-netlify="true" 
-                     onSubmit="sumbit" 
-                     data-netlify-honeypot="bot-field"
-                  >
-                     <input type="hidden" name="form-name" value="contact" />  
+                  <form onSubmit={submitHandler}>
+                     {/* <input type="hidden" name="form-name" value="contact" />   */}
                      {content}
                      <Button
                         configs={{type: 'submit'}}
