@@ -1,161 +1,154 @@
 {
-   "project1": {
-      "_id": "1",
-      "name": "Order Easy",
-      "description": "online food ordering app",
-      "features": [
-         {
-            "label": "client features",
-            "list": [
-               "ordering food from resturants near you as it location based.",
-               "add your own reviews (review per order).",
-               "guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
-            ]
-         },
-         {
-            "label": "admin features",
-            "list": [
-               "creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
-               "creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
-               "menu are catageory based",
-               "checkout your customers reviews devided into reviewed and non-reviewed."
-            ]
-         }
-      ],
-      "alt": "food_app",
-      "carousel": [
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/1.PNG",
-            "alt": "home"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/2.PNG",
-            "alt": "gps_modal"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/3.PNG",
-            "alt": "sign_modal"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/4.PNG",
-            "alt": "signup"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/order_easy/6.PNG",
-            "alt": "resturant_dashboard"
-         }
-      ],
-      "techs": [
-         "fullstack",
-         "frontend",
-         "js",
-         "nodejs",
-         "express",
-         "mongodb",
-         "reactjs",
-         "bootstrap",
-         "jwt"
-      ],
-      "source": {
-         "frontend": "https://github.com/khaledmahfoz/BuyEasy",
-         "backend": "https://github.com/khaledmahfoz/BuyEasy"
-      },
-      "demo": "https://ordereasy.netlify.app/"
-   },
-   "project2": {
-      "_id": "2",
-      "name": "Shop Easy",
-      "description": "online shopping app",
-      "features": [
-         {
-            "label": "client features",
-            "list": [
-               "ability to filter products based on it's category.",
-               "view product details in seprate page.",
-               "shows all info in your cart number of items, price and total price.",
-               "simple tracking order feature."
-            ]
-         },
-         {
-            "label": "admin features",
-            "list": [
-               "creating your own shop page.",
-               "add, edit and delete products.",
-               "categorizing your products.",
-               "view all orders from your clients and change it's order state."
-            ]
-         }
-      ],
-      "alt": "shopping_app",
-      "carousel": [
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/buy_easy/1.PNG",
-            "alt": "home"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/buy_easy/2.PNG",
-            "alt": "detail"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/buy_easy/4.PNG",
-            "alt": "sign"
-         }
-      ],
-      "techs": [
-         "fullstack",
-         "js",
-         "nodejs",
-         "express",
-         "mongodb",
-         "bootstrap"
-      ],
-      "source": {
-         "link": "https://github.com/khaledmahfoz/BuyEasy"
-      },
-      "demo": "https://buy-easy.herokuapp.com/"
-   },
-   "project3": {
-      "_id": "3",
-      "name": "Search movies",
-      "description": "search movies app",
-      "features": [
-         {
-            "label": "app features",
-            "list": [
-               "listing all new movies.",
-               "view movie details in a seprate page.",
-               "search box for finding the required movie."
-            ]
-         }
-      ],
-      "alt": "search_movies",
-      "carousel": [
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/search_movies/1.PNG",
-            "alt": "home"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/search_movies/2.PNG",
-            "alt": "detail"
-         },
-         {
-            "src": "https://static.khaledmahfoz.tk/file/portfolio-prjs/search_movies/3.PNG",
-            "alt": "search_menu"
-         }
-      ],
-      "techs": [
-         "fullstack",
-         "frontend",
-         "js",
-         "nodejs",
-         "express",
-         "reactjs",
-         "react-bootstrap"
-      ],
-      "source": {
-         "frontend": "https://github.com/khaledmahfoz/watch_easy",
-         "backend": "https://github.com/khaledmahfoz/watch_easy_api"
-      },
-      "demo": "https://searchmoviesappdb.netlify.app/"
-   }
+	"project1": {
+		"_id": "1",
+		"name": "Order Easy",
+		"description": "online food ordering app",
+		"features": [
+			{
+				"label": "client features",
+				"list": [
+					"ordering food from resturants near you as it location based.",
+					"add your own reviews (review per order).",
+					"guest cart to add items in the cart without loging in (will merge your orders with old ones when loging in if any)."
+				]
+			},
+			{
+				"label": "admin features",
+				"list": [
+					"creating your own resturant page and the ability to choose the delivery area you want as it shows a circle around your location indeciting your delivery area.",
+					"creating your menu with flixable dashboard to allow adding editing and deleting items from the menu.",
+					"menu are catageory based",
+					"checkout your customers reviews devided into reviewed and non-reviewed."
+				]
+			}
+		],
+		"alt": "food_app",
+		"carousel": [
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/order_easy/1.PNG",
+				"alt": "home"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/order_easy/2.PNG",
+				"alt": "gps_modal"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/order_easy/3.PNG",
+				"alt": "sign_modal"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/order_easy/4.PNG",
+				"alt": "signup"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/order_easy/6.PNG",
+				"alt": "resturant_dashboard"
+			}
+		],
+		"techs": [
+			"fullstack",
+			"frontend",
+			"js",
+			"nodejs",
+			"express",
+			"mongodb",
+			"reactjs",
+			"bootstrap",
+			"jwt"
+		],
+		"source": {
+			"frontend": "https://github.com/khaledmahfoz/BuyEasy",
+			"backend": "https://github.com/khaledmahfoz/BuyEasy"
+		},
+		"demo": "https://ordereasy.netlify.app/"
+	},
+	"project2": {
+		"_id": "2",
+		"name": "Shop Easy",
+		"description": "online shopping app",
+		"features": [
+			{
+				"label": "client features",
+				"list": [
+					"ability to filter products based on it's category.",
+					"view product details in seprate page.",
+					"shows all info in your cart number of items, price and total price.",
+					"simple tracking order feature."
+				]
+			},
+			{
+				"label": "admin features",
+				"list": [
+					"creating your own shop page.",
+					"add, edit and delete products.",
+					"categorizing your products.",
+					"view all orders from your clients and change it's order state."
+				]
+			}
+		],
+		"alt": "shopping_app",
+		"carousel": [
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/buy_easy/1.PNG",
+				"alt": "home"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/buy_easy/2.PNG",
+				"alt": "detail"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/buy_easy/4.PNG",
+				"alt": "sign"
+			}
+		],
+		"techs": ["fullstack", "js", "nodejs", "express", "mongodb", "bootstrap"],
+		"source": {
+			"link": "https://github.com/khaledmahfoz/BuyEasy"
+		},
+		"demo": "https://buy-easy.herokuapp.com/"
+	},
+	"project3": {
+		"_id": "3",
+		"name": "Search movies",
+		"description": "search movies app",
+		"features": [
+			{
+				"label": "app features",
+				"list": [
+					"listing all new movies.",
+					"view movie details in a seprate page.",
+					"search box for finding the required movie."
+				]
+			}
+		],
+		"alt": "search_movies",
+		"carousel": [
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/search_movies/1.PNG",
+				"alt": "home"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/search_movies/2.PNG",
+				"alt": "detail"
+			},
+			{
+				"src": "https://static.khaledmahfoz.com/file/portfolio-prjs/search_movies/3.PNG",
+				"alt": "search_menu"
+			}
+		],
+		"techs": [
+			"fullstack",
+			"frontend",
+			"js",
+			"nodejs",
+			"express",
+			"reactjs",
+			"react-bootstrap"
+		],
+		"source": {
+			"frontend": "https://github.com/khaledmahfoz/watch_easy",
+			"backend": "https://github.com/khaledmahfoz/watch_easy_api"
+		},
+		"demo": "https://searchmoviesappdb.netlify.app/"
+	}
 }
